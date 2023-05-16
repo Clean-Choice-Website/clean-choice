@@ -18,7 +18,7 @@ function Navbar() {
             <h1>CLEAN CHOICE</h1>
           </div>
         </Link>
-        <button className='block'>
+        <button className='block md:hidden'>
           <img src={menuIcon} alt='menu dropdown icon' className='w-8' />
         </button>
         <div className='hidden md:block'>
