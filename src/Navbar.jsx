@@ -4,23 +4,31 @@ import menuIcon from './assets/menuIcon.svg';
 import { Link } from 'react-router-dom';
 import ServicesDropDown from './ServicesDropDown';
 import { useState } from 'react';
+import MobileNavbar from './MobileNavbar';
+import logoNoText from './assets/logo-no-text.png';
 
 function Navbar() {
-  const [showDropDown, setShowDropDown] = useState(false);
+  const [showServices, setShowServices] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <>
-      <nav className='flex items-center justify-between px-12 py-6'>
+    <header>
+      <nav className='flex items-center justify-between px-9 py-6'>
         <Link to='/'>
           <div className='flex items-center gap-2'>
             {/* <img src="https://cleanchoicewi.com/wp-content/uploads/2015/07/Med-Final.png" /> */}
-            <h1 className='text-4xl'>C</h1>
-            <h1>CLEAN CHOICE</h1>
+            <img src={logoNoText} alt='Clean Choice logo' className='w-20' />
+            <h1 className='text-xl font-bold'>CLEAN CHOICE</h1>
           </div>
         </Link>
-        <button className='block'>
-          <img src={menuIcon} alt='menu dropdown icon' className='w-8' />
+        {/* Menu icon Button */}
+        <button
+          onClick={() => setShowMenu((prev) => !prev)}
+          className='block md:hidden'
+        >
+          <img src={menuIcon} alt='menu dropdown icon' className='w-10' />
         </button>
+        {/* Nav links */}
         <div className='hidden md:block'>
           <ul className='flex gap-8'>
             <Link to='/about'>
@@ -28,12 +36,12 @@ function Navbar() {
             </Link>
             <div
               className='relative flex items-center gap-1'
-              onMouseEnter={() => setShowDropDown(true)}
-              onMouseLeave={() => setShowDropDown(false)}
+              onMouseEnter={() => setShowServices(true)}
+              onMouseLeave={() => setShowServices(false)}
             >
               <li>Services</li>
               <img src={downArrow} alt='Down Arrow' className='w-5' />
-              {showDropDown && <ServicesDropDown />}
+              {showServices && <ServicesDropDown />}
             </div>
             <Link to='/reviews'>
               <li>Reviews</li>
@@ -44,7 +52,9 @@ function Navbar() {
           </ul>
         </div>
       </nav>
-    </>
+      {/* Mobile Nav */}
+      {showMenu && <MobileNavbar setShowMenu={setShowMenu} />}
+    </header>
   );
 }
 
