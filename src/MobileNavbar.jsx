@@ -24,7 +24,11 @@ const MobileNavbar = ({ setShowMenu }) => {
             className='flex w-full basis-full items-center justify-between border-b border-gray-300 text-left'
           >
             <li className='w-full py-4'>Services</li>
-            <img src={downArrow} alt='Down Arrow' className='w-7' />
+            <img
+              src={downArrow}
+              alt='Down Arrow'
+              className={`w-7 ${showServices ? 'rotate-180' : ''}`}
+            />
           </button>
 
           {showServices && (
