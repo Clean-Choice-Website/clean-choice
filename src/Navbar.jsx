@@ -4,12 +4,14 @@ import menuIcon from './assets/menuIcon.svg';
 import { Link } from 'react-router-dom';
 import ServicesDropDown from './ServicesDropDown';
 import { useState } from 'react';
+import MobileNavbar from './MobileNavbar';
 
 function Navbar() {
-  const [showDropDown, setShowDropDown] = useState(false);
+  const [showServices, setShowServices] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
 
   return (
-    <>
+    <header>
       <nav className='flex items-center justify-between px-12 py-6'>
         <Link to='/'>
           <div className='flex items-center gap-2'>
@@ -18,9 +20,14 @@ function Navbar() {
             <h1>CLEAN CHOICE</h1>
           </div>
         </Link>
-        <button className='block md:hidden'>
+        {/* Menu icon Button */}
+        <button
+          onClick={() => setShowMenu((prev) => !prev)}
+          className='block md:hidden'
+        >
           <img src={menuIcon} alt='menu dropdown icon' className='w-8' />
         </button>
+        {/* Nav links */}
         <div className='hidden md:block'>
           <ul className='flex gap-8'>
             <Link to='/about'>
@@ -28,12 +35,12 @@ function Navbar() {
             </Link>
             <div
               className='relative flex items-center gap-1'
-              onMouseEnter={() => setShowDropDown(true)}
-              onMouseLeave={() => setShowDropDown(false)}
+              onMouseEnter={() => setShowServices(true)}
+              onMouseLeave={() => setShowServices(false)}
             >
               <li>Services</li>
               <img src={downArrow} alt='Down Arrow' className='w-5' />
-              {showDropDown && <ServicesDropDown />}
+              {showServices && <ServicesDropDown />}
             </div>
             <Link to='/reviews'>
               <li>Reviews</li>
@@ -44,7 +51,9 @@ function Navbar() {
           </ul>
         </div>
       </nav>
-    </>
+      {/* Mobile Nav */}
+      {showMenu && <MobileNavbar setShowMenu={setShowMenu} />}
+    </header>
   );
 }
 
