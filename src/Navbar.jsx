@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import ServicesDropDown from './ServicesDropDown';
 import { useState } from 'react';
 import MobileNavbar from './MobileNavbar';
+import logoNoText from './assets/logo-no-text.png';
 
 function Navbar() {
   const [showServices, setShowServices] = useState(false);
@@ -16,8 +17,8 @@ function Navbar() {
         <Link to='/'>
           <div className='flex items-center gap-2'>
             {/* <img src="https://cleanchoicewi.com/wp-content/uploads/2015/07/Med-Final.png" /> */}
-            <h1 className='text-4xl'>C</h1>
-            <h1>CLEAN CHOICE</h1>
+            <img src={logoNoText} alt='Clean Choice logo' className='w-20' />
+            <h1 className='text-xl font-bold'>CLEAN CHOICE</h1>
           </div>
         </Link>
         {/* Menu icon Button */}
