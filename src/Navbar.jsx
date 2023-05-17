@@ -8,11 +8,11 @@ import MobileNavbar from './MobileNavbar';
 
 function Navbar() {
   const [showServices, setShowServices] = useState(false);
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <header>
-      <nav className='flex items-center justify-between px-12 py-6'>
+      <nav className='flex items-center justify-between px-9 py-6'>
         <Link to='/'>
           <div className='flex items-center gap-2'>
             {/* <img src="https://cleanchoicewi.com/wp-content/uploads/2015/07/Med-Final.png" /> */}
@@ -25,7 +25,7 @@ function Navbar() {
           onClick={() => setShowMenu((prev) => !prev)}
           className='block md:hidden'
         >
-          <img src={menuIcon} alt='menu dropdown icon' className='w-8' />
+          <img src={menuIcon} alt='menu dropdown icon' className='w-10' />
         </button>
         {/* Nav links */}
         <div className='hidden md:block'>

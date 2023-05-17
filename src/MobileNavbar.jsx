@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import downArrow from './assets/downArrow.svg';
 import phone from './assets/phone.svg';
@@ -7,7 +8,7 @@ const MobileNavbar = ({ setShowMenu }) => {
   const [showServices, setShowServices] = useState(false);
 
   return (
-    <div className='absolute z-20 h-[calc(100vh_-_100px)] w-full border bg-black bg-opacity-50'>
+    <div className='absolute z-20 h-[calc(100vh_-_100px)] w-full border bg-black bg-opacity-50 md:hidden'>
       <div className=' z-20 w-full border-t-2 border-gray-400 bg-slate-100'>
         <ul className='mx-4 pb-2 text-xl'>
           <Link to='/about'>
@@ -29,27 +30,46 @@ const MobileNavbar = ({ setShowMenu }) => {
           {showServices && (
             <div className=''>
               <Link to='GeneralCleaning'>
-                <li className='border-b border-gray-300 px-5 py-4 text-lg'>
+                <li
+                  onClick={() => setShowMenu(false)}
+                  className='border-b border-gray-300 px-5 py-4 text-lg'
+                >
                   General Cleaning
                 </li>
               </Link>
-              <Link>
-                <li className='border-b border-gray-300 px-5 py-4 text-lg'>
+              <Link to='/CommercialCleaning'>
+                <li
+                  onClick={() => setShowMenu(false)}
+                  className='border-b border-gray-300 px-5 py-4 text-lg'
+                >
                   Commercial Cleaning
                 </li>
               </Link>
-              <Link>
-                <li className='border-b border-gray-300 px-5 py-4 text-lg'>
+              <Link to='FloorCare'>
+                <li
+                  onClick={() => setShowMenu(false)}
+                  className='border-b border-gray-300 px-5 py-4 text-lg'
+                >
                   Floor Care & Tile Re-Waxing
                 </li>
               </Link>
             </div>
           )}
-          <Link>
-            <li className='border-b border-gray-300 py-4'>Reviews</li>
+          <Link to='/Reviews'>
+            <li
+              onClick={() => setShowMenu(false)}
+              className='border-b border-gray-300 py-4'
+            >
+              Reviews
+            </li>
           </Link>
-          <Link>
-            <li className='border-b border-gray-300 py-4'>Contact</li>
+          <Link to='/contact'>
+            <li
+              onClick={() => setShowMenu(false)}
+              className='border-b border-gray-300 py-4'
+            >
+              Contact
+            </li>
           </Link>
           <li className='flex justify-center gap-2 border-b border-gray-300 py-4 text-slate-500'>
             <img src={phone} alt='Phone icon' className='w-6' />
@@ -57,7 +77,10 @@ const MobileNavbar = ({ setShowMenu }) => {
           </li>
         </ul>
         <Link>
-          <div className='m-2 flex justify-center'>
+          <div
+            onClick={() => setShowMenu(false)}
+            className='m-2 flex justify-center'
+          >
             <p className='mb-3 w-full rounded border-2 border-white bg-green-700 px-8 py-2 text-center text-lg font-bold text-white'>
               Get a Quote
             </p>
