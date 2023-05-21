@@ -1,6 +1,6 @@
 import './App.css';
 import HomePage from './Homepage/HomePage';
-import Navbar from './Navbar';
+import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {

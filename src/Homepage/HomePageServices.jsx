@@ -4,7 +4,7 @@ import ServiceBullet from '../components/ServiceBullet';
 
 const HomePageServices = () => {
   return (
-    <section className='bg-gray-50'>
+    <section className='mx-auto max-w-6xl bg-gray-50'>
       <div className='mx-4 max-w-5xl md:mx-20'>
         <h3 className='py-12 text-center text-5xl font-bold md:text-left'>
           Our Services

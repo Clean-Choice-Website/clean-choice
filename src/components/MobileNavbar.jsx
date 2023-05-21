@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
-import downArrow from './assets/downArrow.svg';
-import phone from './assets/phone.svg';
+import downArrow from '../assets/downArrow.svg';
+import phone from '../assets/phone.svg';
 import { useState } from 'react';
 
 const MobileNavbar = ({ setShowMenu }) => {

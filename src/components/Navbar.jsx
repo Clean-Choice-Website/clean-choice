@@ -1,11 +1,11 @@
-import './App.css';
-import downArrow from './assets/downArrow.svg';
-import menuIcon from './assets/menuIcon.svg';
+import '../App.css';
+import downArrow from '../assets/downArrow.svg';
+import menuIcon from '../assets/menuIcon.svg';
 import { Link } from 'react-router-dom';
 import ServicesDropDown from './ServicesDropDown';
 import { useState } from 'react';
 import MobileNavbar from './MobileNavbar';
-import logoNoText from './assets/logo-no-text.png';
+import logoNoText from '../assets/logo-no-text.png';
 
 function Navbar() {
   const [showServices, setShowServices] = useState(false);
