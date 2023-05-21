@@ -1,6 +1,8 @@
 import './App.css';
 import HomePage from './Homepage/HomePage';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import AboutUs from './AboutUs';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -9,8 +11,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path='/' element={<HomePage />} />
-        <Route exact path='/about' element={<h1>hi</h1>} />
+        <Route exact path='/about' element={<AboutUs />} />
       </Routes>
+      <Footer />
     </>
   );
 }
