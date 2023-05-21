@@ -1,12 +1,11 @@
-import heroImage from './assets/hero_image.png';
-import heroImageLandscape from './assets/hero_image-landscape.png';
+import heroImage from '../assets/hero_image.png';
+import heroImageLandscape from '../assets/hero_image-landscape.png';
 import { Link } from 'react-router-dom';
-import phone from './assets/phone.svg';
-import email from './assets/email.svg';
-import pin from './assets/pin.png';
-import HomePageAbout from './HomePageAbout';
+import phone from '../assets/phone.svg';
+import email from '../assets/email.svg';
+import pin from '../assets/pin.png';
 
-const HomePage = () => {
+const HomePageHero = () => {
   return (
     <>
       <main>
@@ -54,9 +53,8 @@ const HomePage = () => {
           </div>
         </div>
       </main>
-      <HomePageAbout />
     </>
   );
 };
 
-export default HomePage;
+export default HomePageHero;

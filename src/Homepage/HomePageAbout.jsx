@@ -1,5 +1,5 @@
 const circleDimensions = 350;
-import heroImage from './assets/hero_image.png';
+import heroImage from '../assets/hero_image.png';
 import { Link } from 'react-router-dom';
 
 const HomePageAbout = () => {
