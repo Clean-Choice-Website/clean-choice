@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import mopping from '../assets/mopping.jpg';
 import ServiceBullet from '../components/ServiceBullet';
+import Button from '../components/Button';
 
 const HomePageServices = () => {
   return (
@@ -40,11 +40,7 @@ const HomePageServices = () => {
             </div>
           </div>
           <div className='flex justify-center py-12 md:ml-10 md:justify-start'>
-            <Link to='/services'>
-              <p className='inline-block rounded bg-gray-800 px-8 py-4 text-center text-2xl font-bold text-white'>
-                All Services
-              </p>
-            </Link>
+            <Button>All Services</Button>
           </div>
         </div>
       </div>

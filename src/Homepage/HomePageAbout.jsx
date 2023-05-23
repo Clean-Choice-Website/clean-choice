@@ -1,6 +1,6 @@
 const circleDimensions = 350;
 import heroImage from '../assets/hero_image.png';
-import { Link } from 'react-router-dom';
+import Button from '../components/Button';
 
 const HomePageAbout = () => {
   return (
@@ -42,11 +42,7 @@ const HomePageAbout = () => {
               ways we achieve this level of clean:
             </p>
             <div className='mx-auto md:mx-0'>
-              <Link>
-                <p className='inline-block rounded bg-gray-800 px-8 py-4 text-center text-2xl font-bold text-white'>
-                  Learn More
-                </p>
-              </Link>
+              <Button>Learn More</Button>
             </div>
           </div>
         </div>
