@@ -25,7 +25,7 @@ const Services = () => {
         <section className="flex flex-col items-center justify-between py-4 md:items-start">
           <h1 className="mt-4 text-3xl font-bold md:mx-8">Our Services</h1>
           <div className="mx-8 w-full py-4 md:mx-0">
-            <p className="mx-8 rounded-md bg-lime-300 py-4 text-center text-xl font-bold text-white">
+            <p className="mx-8 rounded-md bg-logoGreen py-4 text-center text-xl font-bold text-white">
               Serving Waukesha and Milwaukee Counties for over 25 years
             </p>
           </div>
@@ -195,7 +195,7 @@ const Services = () => {
         <div className="m-8 flex flex-col items-center justify-center md:mx-8 md:justify-start">
           <p className="mb-6 font-bold">Have a Question regarding a service?</p>
           <Link>
-            <p className="inline-block w-32 rounded bg-lime-300 py-2 text-center text-xl font-bold text-white">
+            <p className="inline-block w-32 rounded bg-logoGreen py-2 text-center text-xl font-bold text-white">
               Contact Us
             </p>
           </Link>
