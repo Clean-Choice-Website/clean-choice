@@ -21,23 +21,23 @@ function Footer() {
         <div>
           <ul className="flex flex-col items-center gap-4 text-center md:flex-row md:items-start md:gap-8 md:text-left">
             <Link to="/about">
-              <li className="text-md w-20 font-bold hover:text-green-800 md:w-20 lg:w-32 lg:text-lg">
+              <li className="text-md w-20 font-bold md:w-20 lg:w-32 lg:text-lg">
                 About Us
               </li>
             </Link>
             <Link to="/services">
-              <li className="text-md w-20 font-bold hover:text-green-800 md:w-20 lg:w-32 lg:text-lg">
+              <li className="text-md w-20 font-bold md:w-20 lg:w-32 lg:text-lg">
                 Services
               </li>
             </Link>
             <Link to="/reviews">
-              <li className="text-md w-20 font-bold hover:text-green-800 md:w-20 lg:w-32 lg:text-lg">
+              <li className="text-md w-20 font-bold md:w-20 lg:w-32 lg:text-lg">
                 Reviews
               </li>
             </Link>
             <div>
               <Link to="/contact">
-                <li className="text-md text-center font-bold hover:text-green-800 md:w-24 md:text-left lg:w-32 lg:text-lg">
+                <li className="text-md text-center font-bold md:w-24 md:text-left lg:w-32 lg:text-lg">
                   Contact Us
                 </li>
               </Link>
