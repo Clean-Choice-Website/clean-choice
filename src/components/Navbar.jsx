@@ -5,19 +5,25 @@ import { Link } from "react-router-dom";
 import ServicesDropDown from "./ServicesDropDown";
 import { useState } from "react";
 import MobileNavbar from "./MobileNavbar";
-import logoNoText from "../assets/logo-no-text.png";
+// import logoNoText from "../assets/logo-no-text.png";
+import clearchoicevertical from "../assets/cleanchoicevertical.png";
 
 function Navbar() {
   const [showServices, setShowServices] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header>
-      <nav className="flex items-center justify-between px-9 py-6">
+    <header className="sticky top-0 z-50 bg-white drop-shadow-sm">
+      <nav className="top-0 z-10 flex items-center justify-between px-9 py-6">
         <Link to="/">
           <div className="flex items-center gap-2">
-            <img src={logoNoText} alt="Clean Choice logo" className="w-20" />
-            <h1 className="text-xl font-bold">CLEAN CHOICE</h1>
+            <img
+              src={clearchoicevertical}
+              alt="Clean Choice logo"
+              className="w-60
+            "
+            />
+            {/*    */}
           </div>
         </Link>
         {/* Menu icon Button */}
