@@ -89,12 +89,12 @@ const AboutUs = () => {
         </section>
         <div className="m-8 flex flex-row items-center justify-center gap-6 md:mx-8 md:justify-start">
           <Link>
-            <p className="inline-block w-32 rounded bg-gray-800 py-3 text-center text-xl font-bold text-white">
+            <p className="inline-block w-32 rounded bg-gray-800 py-3 text-center text-xl font-bold text-white hover:bg-slate-400">
               Call Us
             </p>
           </Link>
           <Link>
-            <p className="inline-block w-32 rounded bg-gray-800 py-3 text-center text-xl font-bold text-white">
+            <p className="inline-block w-32 rounded bg-gray-800 py-3 text-center text-xl font-bold text-white hover:bg-slate-400">
               Email Us
             </p>
           </Link>
