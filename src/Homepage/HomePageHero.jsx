@@ -1,5 +1,4 @@
 import heroImage from "../assets/hero_image.png";
-
 import heroImageLandscape from "../assets/hero_image-landscape.png";
 import phone from "../assets/phone.svg";
 import email from "../assets/email.svg";

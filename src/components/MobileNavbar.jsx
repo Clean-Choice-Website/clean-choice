@@ -4,7 +4,7 @@ import downArrow from "../assets/downArrow.svg";
 import phone from "../assets/phone.svg";
 import { useState } from "react";
 
-const MobileNavbar = ({ setShowMenu }) => {
+const MobileNavbar = ({ setShowMenu, openModal }) => {
   const [showServices, setShowServices] = useState(false);
 
   return (
@@ -80,9 +80,12 @@ const MobileNavbar = ({ setShowMenu }) => {
               onClick={() => setShowMenu(false)}
               className="m-2 flex justify-center"
             >
-              <p className="mb-3 w-full rounded border-2 border-white bg-logoGreen px-8 py-2 text-center text-lg font-bold text-white">
+              <button
+                onClick={open}
+                className="mb-3 w-full rounded border-2 border-white bg-logoGreen px-8 py-2 text-center text-lg font-bold text-white"
+              >
                 Get a Quote
-              </p>
+              </button>
             </div>
           </Link>
           <li className="flex justify-center gap-2 border-b border-gray-300 py-4 text-slate-500">
