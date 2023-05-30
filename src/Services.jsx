@@ -29,7 +29,7 @@ const Services = () => {
               Serving Waukesha and Milwaukee Counties for over 25 years
             </p>
           </div>
-          <div className="md:mb-12 md:flex md:max-w-7xl md:flex-row md:items-center md:gap-4">
+          <div className="mb-4 md:mb-12 md:flex md:max-w-7xl md:flex-row md:items-center md:gap-4">
             <div className="md:ml-8 md:mt-2">
               <img
                 className="hidden md:block md:w-auto lg:w-auto"
@@ -73,7 +73,7 @@ const Services = () => {
                     </ul>
                     <div className="mx-auto mt-4 text-center md:mx-0 md:text-left">
                       <Link>
-                        <p className="inline-block rounded bg-gray-800 px-8 py-4 text-center font-bold text-white sm:text-2xl">
+                        <p className="inline-block rounded bg-gray-800 px-8 py-4 text-center font-bold text-white hover:bg-slate-400 sm:text-2xl">
                           Get Quote
                         </p>
                       </Link>
@@ -83,7 +83,7 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <div className="md:mb-12 md:flex md:max-w-7xl md:flex-row md:items-center md:gap-4">
+          <div className="mb:4 md:mb-12 md:flex md:max-w-7xl md:flex-row md:items-center md:gap-4">
             <div className="md:ml-8 md:mt-2">
               <img
                 className="hidden md:block md:w-auto lg:w-auto"
@@ -91,7 +91,7 @@ const Services = () => {
                 alt="Cleaning Image"
               />
             </div>
-            <div className="md:mr-8">
+            <div className="mb-4 md:mb-0 md:mr-8">
               <div className="my-4 text-center md:mt-2 md:px-8 md:text-left">
                 <h3 className="font-bold">Commercial Cleaning</h3>
               </div>
@@ -127,7 +127,7 @@ const Services = () => {
                     </ul>
                     <div className="mx-auto mt-4 text-center md:mx-0 md:text-left">
                       <Link>
-                        <p className="inline-block rounded bg-gray-800 px-8 py-4 text-center font-bold text-white sm:text-2xl">
+                        <p className="inline-block rounded bg-gray-800 px-8 py-4 text-center font-bold text-white hover:bg-slate-400 sm:text-2xl">
                           Get Quote
                         </p>
                       </Link>
@@ -145,7 +145,7 @@ const Services = () => {
                 alt="Cleaning Image"
               />
             </div>
-            <div className="md:mr-8">
+            <div className="mb-8 md:mr-8">
               <div className="my-4 text-center md:mt-2 md:px-8 md:text-left">
                 <h3 className="font-bold">Floor Care {"&"} Tile Re-waxing</h3>
               </div>
@@ -181,7 +181,7 @@ const Services = () => {
                     </ul>
                     <div className="mx-auto mt-4 text-center md:mx-0 md:text-left">
                       <Link>
-                        <p className="inline-block rounded bg-gray-800 px-8 py-4 text-center font-bold text-white sm:text-2xl">
+                        <p className="inline-block rounded bg-gray-800 px-8 py-4 text-center font-bold text-white hover:bg-slate-400 sm:text-2xl">
                           Get Quote
                         </p>
                       </Link>
@@ -192,10 +192,10 @@ const Services = () => {
             </div>
           </div>
         </section>
-        <div className="m-8 flex flex-col items-center justify-center md:mx-8 md:justify-start">
+        <div className="mb-4 flex flex-col items-center justify-center md:mx-8 md:justify-start">
           <p className="mb-6 font-bold">Have a Question regarding a service?</p>
           <Link>
-            <p className="inline-block w-32 rounded bg-logoGreen py-2 text-center text-xl font-bold text-white">
+            <p className="inline-block w-32 rounded bg-logoGreen py-2 text-center text-xl font-bold text-white hover:bg-[#497429]">
               Contact Us
             </p>
           </Link>
