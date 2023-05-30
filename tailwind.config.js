@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         logoGreen: "#c4d951",
+        logoGreenHover: "#b0c348",
       },
     },
   },

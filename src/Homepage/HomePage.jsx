@@ -1,12 +1,12 @@
-import HomePageHero from './HomePageHero';
-import HomePageAbout from './HomePageAbout';
-import HomePageServices from './HomePageServices';
-import HomePageTestimonials from './HomePageTestimonials';
+import HomePageHero from "./HomePageHero";
+import HomePageAbout from "./HomePageAbout";
+import HomePageServices from "./HomePageServices";
+import HomePageTestimonials from "./HomePageTestimonials";
 
-const HomePage = () => {
+const HomePage = ({ openModal }) => {
   return (
     <>
-      <HomePageHero />
+      <HomePageHero openModal={openModal} />
       <HomePageAbout />
       <HomePageServices />
       <HomePageTestimonials />

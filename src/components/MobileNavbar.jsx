@@ -4,7 +4,7 @@ import downArrow from "../assets/downArrow.svg";
 import phone from "../assets/phone.svg";
 import { useState } from "react";
 
-const MobileNavbar = ({ setShowMenu }) => {
+const MobileNavbar = ({ setShowMenu, openModal }) => {
   const [showServices, setShowServices] = useState(false);
 
   return (
@@ -75,21 +75,24 @@ const MobileNavbar = ({ setShowMenu }) => {
               Contact
             </li>
           </Link>
+          <Link>
+            <div
+              onClick={() => setShowMenu(false)}
+              className="m-2 flex justify-center"
+            >
+              <button
+                onClick={open}
+                className="mb-3 w-full rounded border-2 border-white bg-logoGreen px-8 py-2 text-center text-lg font-bold text-white"
+              >
+                Get a Quote
+              </button>
+            </div>
+          </Link>
           <li className="flex justify-center gap-2 border-b border-gray-300 py-4 text-slate-500">
             <img src={phone} alt="Phone icon" className="w-6" />
             <a href="tel:4143109206">(414)310-9206</a>
           </li>
         </ul>
-        <Link>
-          <div
-            onClick={() => setShowMenu(false)}
-            className="m-2 flex justify-center"
-          >
-            <p className="mb-3 w-full rounded border-2 border-white bg-green-700 px-8 py-2 text-center text-lg font-bold text-white">
-              Get a Quote
-            </p>
-          </div>
-        </Link>
       </div>
     </div>
   );
