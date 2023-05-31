@@ -6,6 +6,7 @@ export default {
       colors: {
         logoGreen: "#c4d951",
         logoGreenHover: "#b0c348",
+        ButtonBlackHover: "#4b5563",
       },
     },
   },
