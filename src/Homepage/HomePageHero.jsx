@@ -1,27 +1,14 @@
 /* eslint-disable react/prop-types */
 import heroImage from "../assets/hero_image.png";
 import heroImageLandscape from "../assets/hero_image-landscape.png";
-import phone from "../assets/phone.svg";
-import email from "../assets/email.svg";
-import pin from "../assets/pin.png";
+import ContactInfo from "../components/ContactInfo";
 
 const HomePageHero = ({ openModal }) => {
   return (
     <>
       <main>
-        <div className="flex flex-col items-center justify-center gap-3 bg-slate-200 py-6 text-sm sm:hidden">
-          <div className="flex items-center gap-2 font-bold">
-            <img src={phone} alt="Phone icon" className="w-6" />
-            <a href="tel:4143109206">(414)310-9206</a>
-          </div>
-          <div className="flex items-center gap-2 font-bold">
-            <img src={email} alt="Email icon" className="w-7" />
-            <p>michelle@cleanchoicewi.com</p>
-          </div>
-          <div className="flex items-center gap-2 font-bold">
-            <img src={pin} alt="Map pin icon" className="w-6" />
-            <p>Greendale, WI</p>
-          </div>
+        <div className="sm:hidden">
+          <ContactInfo />
         </div>
         <section className="relative w-full">
           <img
@@ -54,19 +41,8 @@ const HomePageHero = ({ openModal }) => {
           </div>
         </section>
         {/* Contact info div */}
-        <div className="hidden flex-col items-center justify-center gap-3 bg-slate-200 py-6 text-sm sm:flex sm:flex-row sm:gap-7 md:gap-16 md:text-base lg:gap-32">
-          <div className="flex items-center gap-2 font-bold">
-            <img src={phone} alt="Phone icon" className="w-6" />
-            <a href="tel:4143109206">(414)310-9206</a>
-          </div>
-          <div className="flex items-center gap-2 font-bold">
-            <img src={email} alt="Email icon" className="w-7" />
-            <p>michelle@cleanchoicewi.com</p>
-          </div>
-          <div className="flex items-center gap-2 font-bold">
-            <img src={pin} alt="Map pin icon" className="w-6" />
-            <p>Southeastern Wisconsin</p>
-          </div>
+        <div className="hidden sm:block">
+          <ContactInfo />
         </div>
       </main>
     </>
