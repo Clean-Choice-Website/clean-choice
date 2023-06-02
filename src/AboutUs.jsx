@@ -1,26 +1,11 @@
-import phone from "./assets/phone.svg";
-import email from "./assets/email.svg";
-import pin from "./assets/pin.png";
+import ContactInfo from "./components/ContactInfo";
 import CleaningImg from "./assets/CommercialCleaning_Header.png";
 import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
     <div>
-      <div className="flex w-full flex-col items-center justify-center gap-3 bg-slate-200 py-6 text-sm sm:flex-row sm:gap-7 md:gap-16 md:text-base lg:gap-32">
-        <div className="flex items-center gap-2 font-bold">
-          <img src={phone} alt="Phone icon" className="w-6" />
-          <a href="tel:4143109206">(414)310-9206</a>
-        </div>
-        <div className="flex items-center gap-2 font-bold">
-          <img src={email} alt="Email icon" className="w-7" />
-          <p>michelle@cleanchoicewi.com</p>
-        </div>
-        <div className="flex items-center gap-2 font-bold">
-          <img src={pin} alt="Map pin icon" className="w-6" />
-          <p>Greendale, WI</p>
-        </div>
-      </div>
+      <ContactInfo />
       <div className="mx-auto max-w-7xl">
         <section className="flex flex-col items-center justify-between py-4 md:items-start">
           <h1 className="mt-4 text-3xl font-bold md:mx-8">About Us</h1>
