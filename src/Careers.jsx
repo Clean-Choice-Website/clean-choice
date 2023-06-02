@@ -1,5 +1,122 @@
+import ContactInfo from "./components/ContactInfo";
+import { useState } from "react";
+import emailjs from "emailjs-com";
+
 const Careers = () => {
-  return <div>Careers</div>;
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    application: "",
+    resume: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Replace "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", and "YOUR_USER_ID" with your actual values
+    emailjs
+      .sendForm(
+        "service_ge8matn",
+        "template_nh0bluk",
+        e.target,
+        "bD-Rm5YFO4MwTl9Py"
+      )
+      .then(() => {
+        alert("Your message has been sent successfully!");
+      })
+      .catch((error) => {
+        console.error("Error sending message:", error);
+      });
+
+    setFormData({
+      name: "",
+      email: "",
+      phoneNumber: "",
+      application: "",
+      resume: "",
+    });
+  };
+
+  return (
+    <div>
+      <ContactInfo />
+      <div className=" mx-auto w-80 text-center">
+        <h1 className="mb-5 mt-10 text-4xl font-bold">
+          Start a Career with us today!
+        </h1>
+        <h2 className="text-xl font-semibold">
+          We are always hiring and are looking for passionate individuals.
+        </h2>
+      </div>
+      <form onSubmit={handleSubmit} className="mx-auto w-72 space-y-5 pt-5">
+        <div className="rounded-md bg-gray-800 px-6 py-2 text-center font-bold text-white hover:bg-ButtonBlackHover">
+          <a
+            href="https://cleanchoicewi.com/wp-content/uploads/2020/07/Clean-Choice-LLC-Employment-APP-Editable.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Download Application
+          </a>
+        </div>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className="w-full rounded-md border border-gray-300 p-2"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="w-full rounded-md border border-gray-300 p-2"
+        />
+        <input
+          type="text"
+          name="phoneNumber"
+          placeholder="Phone Number"
+          value={formData.phoneNumber}
+          onChange={handleChange}
+          required
+          className="w-full rounded-md border border-gray-300 p-2"
+        />
+        <p className="text-center">Upload Application</p>
+        <input
+          className="rounded-sm"
+          type="file"
+          name="application"
+          value={formData.application}
+          onChange={handleChange}
+        />
+        <p className="text-center">Upload Resume</p>
+        <input
+          className="rounded-sm"
+          type="file"
+          name="resume"
+          value={formData.resume}
+          onChange={handleChange}
+        />
+        <div className="flex">
+          <button
+            type="submit"
+            className="w-full rounded-md bg-logoGreen px-6 py-2 font-bold text-white hover:bg-logoGreenHover"
+          >
+            Submit Application
+          </button>
+        </div>
+      </form>
+    </div>
+  );
 };
 
 export default Careers;
