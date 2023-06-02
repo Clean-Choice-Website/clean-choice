@@ -53,16 +53,18 @@ const Careers = () => {
           We are always hiring and are looking for passionate individuals.
         </h2>
       </div>
-      <form onSubmit={handleSubmit} className="mx-auto w-72 space-y-5 pt-5">
-        <div className="rounded-md bg-gray-800 px-6 py-2 text-center font-bold text-white hover:bg-ButtonBlackHover">
-          <a
-            href="https://cleanchoicewi.com/wp-content/uploads/2020/07/Clean-Choice-LLC-Employment-APP-Editable.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
+      <div className="pt-4 text-center">
+        <a
+          href="https://cleanchoicewi.com/wp-content/uploads/2020/07/Clean-Choice-LLC-Employment-APP-Editable.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="rounded-md bg-gray-800 px-6 py-2 text-center font-bold text-white hover:bg-ButtonBlackHover">
             Download Application
-          </a>
-        </div>
+          </button>
+        </a>
+      </div>
+      <form onSubmit={handleSubmit} className="mx-auto w-72 space-y-5 pt-5">
         <input
           type="text"
           name="name"
