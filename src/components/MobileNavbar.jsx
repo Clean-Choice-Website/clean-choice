@@ -67,6 +67,14 @@ const MobileNavbar = ({ setShowMenu, openModal }) => {
               Reviews
             </li>
           </Link>
+          <Link to="/careers">
+            <li
+              onClick={() => setShowMenu(false)}
+              className="border-b border-gray-300 py-4"
+            >
+              Careers
+            </li>
+          </Link>
           <Link to="/contact">
             <li
               onClick={() => setShowMenu(false)}
@@ -82,7 +90,7 @@ const MobileNavbar = ({ setShowMenu, openModal }) => {
             >
               <button
                 onClick={open}
-                className="mb-3 w-full rounded border-2 border-white bg-logoGreen px-8 py-2 text-center text-lg font-bold text-white"
+                className="mb-3 w-full rounded border-2 border-white bg-logoGreen px-8 py-2 text-center text-lg font-bold text-white hover:bg-logoGreenHover"
               >
                 Get a Quote
               </button>
