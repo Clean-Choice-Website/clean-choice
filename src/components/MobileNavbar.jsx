@@ -75,21 +75,13 @@ const MobileNavbar = ({ setShowMenu, openModal }) => {
               Careers
             </li>
           </Link>
-          <Link to="/contact">
-            <li
-              onClick={() => setShowMenu(false)}
-              className="border-b border-gray-300 py-4"
-            >
-              Contact
-            </li>
-          </Link>
           <Link>
             <div
               onClick={() => setShowMenu(false)}
               className="m-2 flex justify-center"
             >
               <button
-                onClick={open}
+                onClick={openModal}
                 className="mb-3 w-full rounded border-2 border-white bg-logoGreen px-8 py-2 text-center text-lg font-bold text-white hover:bg-logoGreenHover"
               >
                 Get a Quote
