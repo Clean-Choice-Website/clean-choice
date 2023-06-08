@@ -1,5 +1,3 @@
-import defaultUser from '../assets/default-user.png';
-
 const Review = () => {
   return (
     <div className='mx-auto flex max-w-5xl justify-center'>
@@ -15,7 +13,7 @@ const Review = () => {
             <p className='text-lg font-semibold text-green-800'>Ian Nathan</p>
             <p className='text-sm text-gray-500'>Customer</p>
           </div>
-          <img className='w-12 md:h-12' src={defaultUser} alt='User icon' />
+          {/* <img className='w-12 md:h-12' src={defaultUser} alt='User icon' /> */}
         </div>
       </div>
     </div>
