@@ -42,7 +42,7 @@ const HomePageAbout = () => {
               ways we achieve this level of clean:
             </p>
             <div className="mx-auto md:mx-0">
-              <Button>Learn More</Button>
+              <Button to={"about"}>Learn More</Button>
             </div>
           </div>
         </div>

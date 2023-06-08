@@ -24,7 +24,7 @@ const Services = () => {
             </div>
             <div className="md:mr-8">
               <div className="my-4 text-center md:mt-2 md:px-8 md:text-left">
-                <h3 className="font-bold">General Cleaning</h3>
+                <h3 className="font-bold">Commercial Cleaning</h3>
               </div>
               <div className="items-start">
                 <p className="px-8 py-2 md:pr-4">
@@ -78,7 +78,7 @@ const Services = () => {
             </div>
             <div className="mb-4 md:mb-0 md:mr-8">
               <div className="my-4 text-center md:mt-2 md:px-8 md:text-left">
-                <h3 className="font-bold">Commercial Cleaning</h3>
+                <h3 className="font-bold">Carpet Cleaning</h3>
               </div>
               <div className="items-start">
                 <p className="px-8 py-2 md:pr-4">
