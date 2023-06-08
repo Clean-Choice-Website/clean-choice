@@ -1,14 +1,15 @@
-import ContactInfo from "./components/ContactInfo";
-import { useState } from "react";
-import emailjs from "emailjs-com";
+import ContactInfo from './components/ContactInfo';
+import { useState, useEffect } from 'react';
+import emailjs from 'emailjs-com';
+import { scrollToTop } from './utils/scrollToTop';
 
 const Careers = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    application: "",
-    resume: "",
+    name: '',
+    email: '',
+    phoneNumber: '',
+    application: '',
+    resume: '',
   });
 
   const handleChange = (e) => {
@@ -21,97 +22,101 @@ const Careers = () => {
     // Replace "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", and "YOUR_USER_ID" with your actual values
     emailjs
       .sendForm(
-        "service_ge8matn",
-        "template_nh0bluk",
+        'service_ge8matn',
+        'template_nh0bluk',
         e.target,
-        "bD-Rm5YFO4MwTl9Py"
+        'bD-Rm5YFO4MwTl9Py'
       )
       .then(() => {
-        alert("Your message has been sent successfully!");
+        alert('Your message has been sent successfully!');
       })
       .catch((error) => {
-        console.error("Error sending message:", error);
+        console.error('Error sending message:', error);
       });
 
     setFormData({
-      name: "",
-      email: "",
-      phoneNumber: "",
-      application: "",
-      resume: "",
+      name: '',
+      email: '',
+      phoneNumber: '',
+      application: '',
+      resume: '',
     });
   };
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <div>
       <ContactInfo />
-      <div className=" mx-auto w-80 text-center">
-        <h1 className="mb-5 mt-10 text-4xl font-bold">
+      <div className=' mx-auto w-80 text-center'>
+        <h1 className='mb-5 mt-10 text-4xl font-bold'>
           Start a Career with us today!
         </h1>
-        <h2 className="text-xl font-semibold">
+        <h2 className='text-xl font-semibold'>
           We are always hiring and are looking for passionate individuals.
         </h2>
       </div>
-      <div className="pt-4 text-center">
+      <div className='pt-4 text-center'>
         <a
-          href="https://cleanchoicewi.com/wp-content/uploads/2020/07/Clean-Choice-LLC-Employment-APP-Editable.pdf"
-          target="_blank"
-          rel="noreferrer"
+          href='https://cleanchoicewi.com/wp-content/uploads/2020/07/Clean-Choice-LLC-Employment-APP-Editable.pdf'
+          target='_blank'
+          rel='noreferrer'
         >
-          <button className="rounded-md bg-gray-800 px-6 py-2 text-center font-bold text-white hover:bg-ButtonBlackHover">
+          <button className='rounded-md bg-gray-800 px-6 py-2 text-center font-bold text-white hover:bg-ButtonBlackHover'>
             Download Application
           </button>
         </a>
       </div>
-      <form onSubmit={handleSubmit} className="mx-auto w-72 space-y-5 pt-5">
+      <form onSubmit={handleSubmit} className='mx-auto w-72 space-y-5 pt-5'>
         <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
+          type='text'
+          name='name'
+          placeholder='Your Name'
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full rounded-md border border-gray-300 p-2"
+          className='w-full rounded-md border border-gray-300 p-2'
         />
         <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
+          type='email'
+          name='email'
+          placeholder='Your Email'
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full rounded-md border border-gray-300 p-2"
+          className='w-full rounded-md border border-gray-300 p-2'
         />
         <input
-          type="text"
-          name="phoneNumber"
-          placeholder="Phone Number"
+          type='text'
+          name='phoneNumber'
+          placeholder='Phone Number'
           value={formData.phoneNumber}
           onChange={handleChange}
           required
-          className="w-full rounded-md border border-gray-300 p-2"
+          className='w-full rounded-md border border-gray-300 p-2'
         />
-        <p className="text-center">Upload Application</p>
+        <p className='text-center'>Upload Application</p>
         <input
-          className="rounded-sm"
-          type="file"
-          name="application"
+          className='rounded-sm'
+          type='file'
+          name='application'
           value={formData.application}
           onChange={handleChange}
         />
-        <p className="text-center">Upload Resume</p>
+        <p className='text-center'>Upload Resume</p>
         <input
-          className="rounded-sm"
-          type="file"
-          name="resume"
+          className='rounded-sm'
+          type='file'
+          name='resume'
           value={formData.resume}
           onChange={handleChange}
         />
-        <div className="flex">
+        <div className='flex'>
           <button
-            type="submit"
-            className="w-full rounded-md bg-logoGreen px-6 py-2 font-bold text-white hover:bg-logoGreenHover"
+            type='submit'
+            className='w-full rounded-md bg-logoGreen px-6 py-2 font-bold text-white hover:bg-logoGreenHover'
           >
             Submit Application
           </button>
