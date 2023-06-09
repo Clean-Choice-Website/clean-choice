@@ -70,7 +70,10 @@ const Reviews = () => {
       <div className='mt-16 text-center'>
         <h1 className='mb-3 mt-2 text-3xl font-bold'>Leave A Review</h1>
         {/* <p className='mb-4'>We are here for you! How can we help?</p> */}
-        <form onSubmit={handleSubmit} className='mx-4 space-y-5'>
+        <form
+          onSubmit={handleSubmit}
+          className='mx-4 max-w-2xl space-y-5 md:mx-auto'
+        >
           <input
             type='text'
             name='name'
