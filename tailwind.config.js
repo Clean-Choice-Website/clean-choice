@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        logoGreen: "#c4d951",
-        logoGreenHover: "#b0c348",
-        ButtonBlackHover: "#4b5563",
+        logoGreen: "#497429",
+        logoGreenHover: "#5b9133",
+        ButtonBlackHover: "#273345",
       },
     },
   },
