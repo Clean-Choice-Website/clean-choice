@@ -35,7 +35,7 @@ function App() {
         <Route exact path="/careers" element={<Careers />} />
         <Route exact path="/reviews" element={<Reviews />} />
       </Routes>
-      <Footer />
+      <Footer openModal={openModal} />
       {showModal && <ContactModal closeModal={closeModal} />}
     </>
   );
