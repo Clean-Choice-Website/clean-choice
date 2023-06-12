@@ -12,13 +12,13 @@ const HomePageServices = () => {
           </h3>
           <div className="flex items-center gap-20">
             <ul className="flex w-full flex-col gap-6 md:w-2/3">
-              <ServiceBullet serviceName="General Cleaning">
+              <ServiceBullet serviceName="Commercial Cleaning">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
                 quos quo inventore enim saepe debitis accusantium reprehenderit
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
                 quos quo inventore enim saepe debitis accusantium reprehenderit
               </ServiceBullet>
-              <ServiceBullet serviceName="Commercial Cleaning">
+              <ServiceBullet serviceName="Carpet Cleaning">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
                 quos quo inventore enim saepe debitis accusantium reprehenderit
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
