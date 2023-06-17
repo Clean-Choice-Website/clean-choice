@@ -24,7 +24,7 @@ const Reviews = () => {
     e.preventDefault();
     setIsSending((prev) => !prev);
 
-    const fakeWait = setTimeout(() => {
+    setTimeout(() => {
       setIsSending((prev) => !prev);
       setSentSuccessfully(true);
       setFormData({
@@ -79,35 +79,29 @@ const Reviews = () => {
         ))} */}
       </div>
       <div className='flex flex-col gap-6'>
-        <Review>
-          {' '}
-          Lorem ipsum dolor sit amet consect etur, adipisicing elit. Non,
-          deleniti consectetur nihil quaerat soluta explicabo enim Lorem ipsum
-          dolor sit amet consect etur, adipisicing elit. Non, deleniti
-          consectetur nihil quaerat soluta explicabo enim{' '}
+        <Review name={'Brandon Neddef'}>
+          {`Good service and friendly staff. Staff is very friendly, punctual and thorough!`}
         </Review>
-        <Review>
-          {' '}
-          Lorem ipsum dolor sit amet consect etur, adipisicing elit. Non,
-          deleniti consectetur nihil quaerat soluta explicabo enim Lorem ipsum
+        <Review name='Kevin Coubal'>
+          Plant Supervisor. Very easy people to work with and very
+          accommodation... Thanks for the Great service. I will definitely
+          recommend and use again...
         </Review>
-        <Review>
-          {' '}
-          Lorem ipsum dolor sit amet consect etur, adipisicing elit. Non,
-          deleniti consectetur nihil quaerat soluta explicabo enim Lorem ipsum
-          dolor sit amet consect etur, adipisicing elit. Non, deleniti
-          consectetur nihil quaerat soluta explicabo enim{' '}
+        <Review name={'Lisa Turnacliff'}>
+          Clean Choice has done a good job. They are reliable and follow up with
+          an concerns or questions that arise. I like the open communication
+          between myself, the cleaners and Chad, the owner. I would recommend
+          Clean Choice to anyone who is in the market for a new cleaning
+          company.
         </Review>
-        <Review>
-          {' '}
-          Lorem ipsum dolor sit amet consect etur, adipisicing elit. Non,
-          deleniti consectetur nihil quaerat soluta explicabo enim Lorem ipsum
-          dolor sit amet consect etur, adipisicing elit. Non, deleniti
-          consectetur nihil quaerat soluta explicabo enim Lorem ipsum dolor sit
-          amet consect etur, adipisicing elit. Non, deleniti consectetur nihil
-          quaerat soluta explicabo enim Lorem ipsum dolor sit amet consect etur,
-          adipisicing elit. Non, deleniti consectetur nihil quaerat soluta
-          explicabo enim{' '}
+        <Review name={'Jackie Hall'}>
+          Great Service, easy to work with and everyone is very friendly! Chad,
+          the owner, is very attentive and helpful. He is easy to work with and
+          always making sure his workers are doing a good job. Chad always looks
+          to make things easier and more efficient for his employees to be able
+          to do their job better. Clean Choice also did our carpet cleaning.
+          They come twice a week to clean and do a great job. I highly recommend
+          Clean Choice for your custodial needs.
         </Review>
       </div>
       <div className='mt-16 text-center'>
