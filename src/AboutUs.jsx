@@ -1,6 +1,5 @@
 import ContactInfo from "./components/ContactInfo";
 import CleaningImg from "./assets/AboutUs.png";
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { scrollToTop } from "./utils/scrollToTop";
 
