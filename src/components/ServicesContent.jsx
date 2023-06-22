@@ -1,12 +1,8 @@
 const ServicesContent = ({ image, name, info, list, row }) => {
   return (
     <div className={row}>
-      <div className="md:mt-2 lg:basis-1/2">
-        <img
-          className="hidden max-w-xl lg:block lg:w-auto"
-          src={image}
-          alt="Cleaning Image"
-        />
+      <div className="hidden md:mt-2 lg:block lg:basis-1/2">
+        <img className="max-w-xl lg:w-full" src={image} alt="Cleaning Image" />
       </div>
       <div className="lg:basis-1/2">
         <div className="my-4 text-center lg:mt-2 lg:text-left">
@@ -15,12 +11,8 @@ const ServicesContent = ({ image, name, info, list, row }) => {
         <div className="items-start">
           <p className="py-2 md:px-0">{info}</p>
           <div className="mt-2">
-            <div>
-              <img
-                className="w-auto lg:hidden"
-                src={image}
-                alt="Cleaning Image"
-              />
+            <div className="lg:hidden">
+              <img className="w-auto" src={image} alt="Cleaning Image" />
             </div>
             <div>
               <ul className="ml-4 mt-4 list-disc text-lg">
