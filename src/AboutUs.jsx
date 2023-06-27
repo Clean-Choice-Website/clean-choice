@@ -19,7 +19,7 @@ const AboutUs = () => {
               Serving Waukesha and Milwaukee Counties for over 25 years
             </p>
           </div>
-          <div className="pr-8 md:flex md:max-w-7xl md:flex-row md:gap-4">
+          <div className="items-center pr-8 md:flex md:max-w-7xl md:flex-row md:gap-4">
             <div className="items-start">
               <p className="px-8 py-2 md:pr-4">
                 Our environmentally repsonsible approach focuses on the proper
@@ -38,7 +38,7 @@ const AboutUs = () => {
               </p>
             </div>
             <img
-              className="hidden md:block md:w-72"
+              className="hidden md:block md:h-64 lg:h-52"
               src={CleaningImg}
               alt="Cleaning Image"
             />
