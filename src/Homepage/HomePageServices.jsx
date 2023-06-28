@@ -6,8 +6,8 @@ const HomePageServices = () => {
   return (
     <section className=" bg-gray-50">
       <div className="mx-auto max-w-6xl">
-        <div className="mx-4 max-w-5xl md:mx-20">
-          <h3 className="py-12 text-center text-5xl font-bold md:text-left">
+        <div className="mx-4 max-w-5xl md:ml-8 lg:mx-20">
+          <h3 className="py-12 text-center text-5xl font-bold md:ml-10 md:text-left">
             Our Services
           </h3>
           <div className="flex items-center gap-20">

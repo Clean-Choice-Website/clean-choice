@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import application from "./assets/Employment.pdf";
 import { scrollToTop } from "./utils/scrollToTop";
+import Indeed from "./assets/indeed.png";
 
 const Careers = () => {
   const [formData, setFormData] = useState({
@@ -64,7 +65,10 @@ const Careers = () => {
               rel="noreferrer"
             >
               <button className="rounded-md bg-[#2457A7] px-6 py-3 text-center font-bold text-white hover:bg-[#2440a7]">
-                Apply with Indeed
+                <div className=" inline-flex gap-2">
+                  Apply with Indeed{" "}
+                  <img className="w-6" src={Indeed} alt="Indeed Icon" />
+                </div>
               </button>
             </a>
           </div>
