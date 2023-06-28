@@ -60,7 +60,7 @@ const Reviews = () => {
     <div className=" bg-slate-100 pb-8">
       <div className="mb-12 flex flex-col  items-center bg-logoGreen py-5">
         <h1 className="mb-1 text-center text-3xl font-semibold text-white">
-          Testimonials
+          Reviews
         </h1>
         <div className="flex gap-1">
           <StarIcon />
