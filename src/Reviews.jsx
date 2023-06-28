@@ -84,7 +84,7 @@ const Reviews = () => {
         </Review>
         <Review name="Kevin Coubal">
           Plant Supervisor. Very easy people to work with and very
-          accommodation... Thanks for the Great service. I will definitely
+          accommodating... Thanks for the Great service. I will definitely
           recommend and use again...
         </Review>
         <Review name={"Lisa Turnacliff"}>
