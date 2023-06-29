@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import application from "./assets/Employment.pdf";
 import { scrollToTop } from "./utils/scrollToTop";
+import Indeed from "./assets/indeed.png";
 
 const Careers = () => {
   const [formData, setFormData] = useState({
@@ -21,10 +22,10 @@ const Careers = () => {
     // Replace "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", and "YOUR_USER_ID" with your actual values
     emailjs
       .sendForm(
-        "service_ge8matn",
-        "template_nh0bluk",
+        "service_pm4gjbs",
+        "template_1bkwyao",
         e.target,
-        "bD-Rm5YFO4MwTl9Py"
+        "0yFpo6v7S8OzZG-s5"
       )
       .then(() => {
         alert("Your message has been sent successfully!");
@@ -47,7 +48,7 @@ const Careers = () => {
   return (
     <div>
       <ContactInfo />
-      <div className="items-center bg-slate-100 md:flex md:flex-col md:justify-center md:py-8 md:align-top">
+      <div className="items-center bg-slate-100 py-8 md:flex md:flex-col md:justify-center md:align-top">
         <div className="md:ml-14a">
           <div className=" mx-auto w-80 text-center md:w-auto">
             <h1 className="mb-5 pt-10 text-4xl font-bold md:mt-0 md:text-5xl">
@@ -64,7 +65,10 @@ const Careers = () => {
               rel="noreferrer"
             >
               <button className="rounded-md bg-[#2457A7] px-6 py-3 text-center font-bold text-white hover:bg-[#2440a7]">
-                Apply with Indeed
+                <div className=" inline-flex gap-2">
+                  Apply with Indeed{" "}
+                  <img className="w-6" src={Indeed} alt="Indeed Icon" />
+                </div>
               </button>
             </a>
           </div>

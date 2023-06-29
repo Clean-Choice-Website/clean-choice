@@ -52,10 +52,10 @@ const Reviews = () => {
     // Replace "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", and "YOUR_USER_ID" with your actual values
     // emailjs
     //   .sendForm(
-    //     'service_ge8matn',
-    //     'template_nh0bluk',
+    //     "service_pm4gjbs",
+    //     "template_1bkwyao",
     //     e.target,
-    //     'bD-Rm5YFO4MwTl9Py'
+    //     "0yFpo6v7S8OzZG-s5"
     //   )
     //   .then(() => {
     //     alert('Your message has been sent successfully!');
@@ -92,7 +92,7 @@ const Reviews = () => {
     <div className=' bg-slate-100 pb-8'>
       <div className='mb-12 flex flex-col  items-center bg-logoGreen py-5'>
         <h1 className='mb-1 text-center text-3xl font-semibold text-white'>
-          Testimonials
+          Reviews
         </h1>
         <div className='flex gap-1'>
           <StarIcon />
@@ -109,7 +109,7 @@ const Reviews = () => {
         </Review>
         <Review name='Kevin Coubal'>
           Plant Supervisor. Very easy people to work with and very
-          accommodation... Thanks for the Great service. I will definitely
+          accommodating... Thanks for the Great service. I will definitely
           recommend and use again...
         </Review>
         <Review name={'Lisa Turnacliff'}>

@@ -27,10 +27,10 @@ function ContactModal({ closeModal }) {
     // Replace "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", and "YOUR_USER_ID" with your actual values
     emailjs
       .sendForm(
-        'service_ge8matn',
-        'template_nh0bluk',
+        'service_pm4gjbs',
+        'template_mgnnh5n',
         e.target,
-        'bD-Rm5YFO4MwTl9Py'
+        '0yFpo6v7S8OzZG-s5'
       )
       .then(() => {
         setMessageSending(false);

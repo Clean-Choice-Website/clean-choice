@@ -44,8 +44,12 @@ function Footer({ openModal }) {
               </li>
               <div>
                 <ul className="flex flex-col items-center text-xs md:block md:text-sm">
-                  <li>(414) 310-9206</li>
-                  <li>michelle@cleanchoicewi.com</li>
+                  <a href="tel:+14143109206">
+                    <li>(414) 310-9206</li>
+                  </a>
+                  <a href="mailto:michelle@cleanchoicewi.com">
+                    <li>michelle@cleanchoicewi.com</li>
+                  </a>
                 </ul>
               </div>
             </div>
