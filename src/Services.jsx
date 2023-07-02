@@ -60,7 +60,7 @@ const Services = ({ openModal }) => {
           <p className="mb-6 font-bold">Have a Question regarding a service?</p>
           <button
             onClick={openModal}
-            className="inline-block w-32 rounded bg-logoGreen py-3 text-center text-xl font-bold text-white hover:bg-logoGreenHover"
+            className="inline-block w-32 rounded bg-logoGreen py-3 text-center text-xl font-bold text-white transition-all hover:bg-logoGreenHover"
           >
             Contact Us
           </button>

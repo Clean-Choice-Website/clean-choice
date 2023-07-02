@@ -79,12 +79,12 @@ const AboutUs = () => {
         </section>
         <div className="m-8 flex flex-row items-center justify-center gap-6 md:mx-8 md:justify-start">
           <a href="tel:+14143109206">
-            <p className="inline-block w-32 rounded bg-gray-800 py-3 text-center text-xl font-bold text-white hover:bg-ButtonBlackHover">
+            <p className="inline-block w-32 rounded bg-gray-800 py-3 text-center text-xl font-bold text-white transition-all hover:bg-ButtonBlackHover">
               Call Us
             </p>
           </a>
           <a href="mailto:michelle@cleanchoicewi.com">
-            <p className="inline-block w-32 rounded bg-gray-800 py-3 text-center text-xl font-bold text-white hover:bg-ButtonBlackHover">
+            <p className="inline-block w-32 rounded bg-gray-800 py-3 text-center text-xl font-bold text-white transition-all hover:bg-ButtonBlackHover">
               Email Us
             </p>
           </a>

@@ -33,13 +33,15 @@ const HomePageAbout = () => {
               About Us
             </h3>
             <h4 className="text-center text-lg font-bold md:text-left">
-              Serving the Greater Wisconsin area for over 20 years
+              Serving the South Eastern Wisconsin area for over 10 years
             </h4>
             <p className="font-light">
-              Our environmentally responsible approach focuses on the proper
-              training and use of cleaning solutions as well as proper disposal
-              of any harsh detergents/cleaning compounds. Below are some of the
-              ways we achieve this level of clean:
+              Our highest standards for cleanliness keep our well trained and
+              motivated cleaners focused on delivering a top-quality, consistent
+              service. We go the extra mile for our clients with our 24/7 phone
+              line, environmentally responsible approach, and free custom
+              proposals to ensure our customer’s facilities are cleaned to their
+              highest standards.
             </p>
             <div className="mx-auto md:mx-0">
               <Button to={"about"}>Learn More</Button>

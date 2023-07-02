@@ -1,26 +1,26 @@
 /* eslint-disable react/prop-types */
-import '../App.css';
-import menuIcon from '../assets/menuIcon.svg';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import MobileNavbar from './MobileNavbar';
-import clearchoicevertical from '../assets/cleanchoicevertical.png';
+import "../App.css";
+import menuIcon from "../assets/menuIcon.svg";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import MobileNavbar from "./MobileNavbar";
+import clearchoicevertical from "../assets/cleanchoicevertical.png";
 
 function Navbar({ openModal }) {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header className='sticky top-0 z-20 bg-white drop-shadow-sm'>
-      <nav className='top-0 z-10 flex items-center justify-between px-3 py-6 sm:px-9 md:px-4'>
-        <Link to='/'>
+    <header className="sticky top-0 z-20 bg-white drop-shadow-sm">
+      <nav className="top-0 z-10 flex items-center justify-between px-3 py-6 sm:px-9 md:px-4">
+        <Link to="/">
           <div
-            className='flex items-center gap-2'
+            className="flex items-center gap-2"
             onClick={() => setShowMenu(false)}
           >
             <img
               src={clearchoicevertical}
-              alt='Clean Choice logo'
-              className='w-48 lg:w-60'
+              alt="Clean Choice logo"
+              className="w-48 lg:w-60"
             />
             {/*    */}
           </div>
@@ -28,27 +28,27 @@ function Navbar({ openModal }) {
         {/* Menu icon Button */}
         <button
           onClick={() => setShowMenu((prev) => !prev)}
-          className='block md:hidden'
+          className="block md:hidden"
         >
-          <img src={menuIcon} alt='menu dropdown icon' className='w-10' />
+          <img src={menuIcon} alt="menu dropdown icon" className="w-10" />
         </button>
         {/* Nav links */}
-        <div className='ml-auto hidden items-center gap-8 md:flex'>
-          <Link to='/about'>
-            <li className='list-none font-medium'>About Us</li>
+        <div className="ml-auto hidden items-center gap-8 md:flex">
+          <Link to="/about">
+            <li className="list-none font-medium">About Us</li>
           </Link>
-          <Link to='/services'>
-            <li className='list-none font-medium'>Services</li>
+          <Link to="/services">
+            <li className="list-none font-medium">Services</li>
           </Link>
-          <Link to='/reviews'>
-            <li className='list-none font-medium'>Reviews</li>
+          <Link to="/reviews">
+            <li className="list-none font-medium">Reviews</li>
           </Link>
-          <Link to='/careers'>
-            <li className='list-none font-medium'>Careers</li>
+          <Link to="/careers">
+            <li className="list-none font-medium">Careers</li>
           </Link>
           <button
             onClick={openModal}
-            className='rounded-sm bg-logoGreen  p-2 px-5 font-medium text-white hover:bg-logoGreenHover'
+            className="rounded-sm bg-logoGreen  p-2 px-5 font-medium text-white transition-all hover:bg-logoGreenHover"
           >
             Get a Quote
           </button>
