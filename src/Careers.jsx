@@ -64,7 +64,7 @@ const Careers = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="rounded-md bg-[#2457A7] px-6 py-3 text-center font-bold text-white hover:bg-[#2440a7]">
+              <button className="rounded-md bg-[#2457A7] px-6 py-3 text-center font-bold text-white transition-all hover:bg-[#2440a7]">
                 <div className=" inline-flex gap-2">
                   Apply with Indeed{" "}
                   <img className="w-6" src={Indeed} alt="Indeed Icon" />
@@ -120,7 +120,7 @@ const Careers = () => {
           <div className="flex">
             <button
               type="submit"
-              className="w-full rounded-md bg-logoGreen px-6 py-2 font-bold text-white hover:bg-logoGreenHover"
+              className="w-full rounded-md bg-logoGreen px-6 py-2 font-bold text-white transition-all hover:bg-logoGreenHover"
             >
               Send Message
             </button>
