@@ -29,7 +29,7 @@ const Services = ({ openModal }) => {
           <h1 className="mt-4 text-3xl font-bold">Our Services</h1>
           <div className="w-full py-4 md:mx-0 lg:pb-10">
             <p className="rounded-md bg-logoGreen px-4 py-4 text-center text-xl font-bold text-white lg:px-0">
-              Serving Waukesha and Milwaukee Counties for over 25 years
+              Serving Waukesha and Milwaukee Counties for over 10 years
             </p>
           </div>
           <div className="mx-8 flex flex-col gap-6 lg:mx-0">
