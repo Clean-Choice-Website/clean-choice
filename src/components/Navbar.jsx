@@ -35,16 +35,24 @@ function Navbar({ openModal }) {
         {/* Nav links */}
         <div className="ml-auto hidden items-center gap-8 md:flex">
           <Link to="/about">
-            <li className="list-none font-medium">About Us</li>
+            <li className="list-none font-medium transition-all hover:text-logoGreen">
+              About Us
+            </li>
           </Link>
           <Link to="/services">
-            <li className="list-none font-medium">Services</li>
+            <li className="list-none font-medium transition-all hover:text-logoGreen">
+              Services
+            </li>
           </Link>
           <Link to="/reviews">
-            <li className="list-none font-medium">Reviews</li>
+            <li className="list-none font-medium transition-all hover:text-logoGreen">
+              Reviews
+            </li>
           </Link>
           <Link to="/careers">
-            <li className="list-none font-medium">Careers</li>
+            <li className="list-none font-medium transition-all hover:text-logoGreen">
+              Careers
+            </li>
           </Link>
           <button
             onClick={openModal}
