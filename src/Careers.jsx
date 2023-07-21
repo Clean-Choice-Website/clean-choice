@@ -86,8 +86,18 @@ const Careers = () => {
               className="text-logoGreen underline hover:text-logoGreenHover"
             >
               here
+            </a>{" "}
+            and
+            <br></br>
+            email to{" "}
+            <a
+              href="mailto:michelle@cleanchoicewi.com"
+              className="hover:text-logoGreen"
+            >
+              michelle@cleanchoicewi.com
             </a>
-            <div className="">or</div>
+            <br></br>
+            <br></br>
             Contact us about available jobs
           </h4>
           <input

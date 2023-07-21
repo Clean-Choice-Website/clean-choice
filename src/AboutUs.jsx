@@ -16,7 +16,7 @@ const AboutUs = () => {
           <h1 className="mt-4 text-3xl font-bold md:mx-8">About Us</h1>
           <div className="mx-8 w-full py-4 md:mx-0">
             <p className="mx-8 rounded-md bg-logoGreen py-4 text-center text-xl font-bold text-white">
-              Serving Waukesha and Milwaukee Counties for over 25 years
+              Serving Waukesha and Milwaukee Counties for over 10 years
             </p>
           </div>
           <div className="items-center pr-8 md:flex md:max-w-7xl md:flex-row md:gap-4">
