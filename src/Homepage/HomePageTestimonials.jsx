@@ -18,7 +18,7 @@ const HomePageTestimonials = () => {
             Our Customers love what we do
           </h3>
           <p className="lg:w-3/4 lg:text-lg">
-            With over 20+ years in business, we pride ourselves on customer
+            With over 10+ years in business, we pride ourselves on customer
             service and satisfaction.
           </p>
           <div className="hidden lg:block">
