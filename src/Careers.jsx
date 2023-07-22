@@ -1,16 +1,26 @@
 import ContactInfo from "./components/ContactInfo";
-import { useState, useEffect } from "react";
+import thankyoucheck from "./assets/thankyoucheck.png";
+import { BarLoader } from "react-spinners";
+import { useState, useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
 import application from "./assets/Employment.pdf";
 import { scrollToTop } from "./utils/scrollToTop";
 import Indeed from "./assets/indeed.png";
 
 const Careers = () => {
+  const [isSending, setIsSending] = useState(false);
+  const modalRef = useRef(null);
+  const [errorMsg, setErrorMsg] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+  const [sentSuccessfully, setSentSuccessfully] = useState(false);
+
+  const closeModal = () => {
+    setSentSuccessfully(false);
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,6 +28,8 @@ const Careers = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSending(true);
+    setErrorMsg(false);
 
     // Replace "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", and "YOUR_USER_ID" with your actual values
     emailjs
@@ -28,22 +40,40 @@ const Careers = () => {
         "0yFpo6v7S8OzZG-s5"
       )
       .then(() => {
-        alert("Your message has been sent successfully!");
+        setIsSending(false);
+        setSentSuccessfully(true);
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
       })
       .catch((error) => {
+        setErrorMsg(true);
+        setIsSending(false);
+        setSentSuccessfully(false);
         console.error("Error sending message:", error);
       });
-
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
   };
 
   useEffect(() => {
     scrollToTop();
   }, []);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleOutsideClick = (e) => {
+    if (modalRef.current && !modalRef.current.contains(e.target)) {
+      closeModal();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [handleOutsideClick]);
 
   return (
     <div>
@@ -130,13 +160,54 @@ const Careers = () => {
           <div className="flex">
             <button
               type="submit"
-              className="w-full rounded-md bg-logoGreen px-6 py-2 font-bold text-white transition-all hover:bg-logoGreenHover"
+              className={`w-full rounded-md bg-logoGreen px-6 font-bold text-white transition-all hover:bg-logoGreenHover ${
+                isSending ? "py-5" : "py-2"
+              }`}
             >
-              Send Message
+              {isSending ? (
+                <BarLoader color="#fff" width={"100%"} height={3} />
+              ) : (
+                "Send Message"
+              )}
             </button>
           </div>
+          {errorMsg ? (
+            <small className=" flex justify-center">
+              Oops there was an error, please try again.
+            </small>
+          ) : null}
         </form>
       </div>
+
+      {/* Successful review sent modal */}
+      {sentSuccessfully && (
+        <div className="fixed left-0 top-0 z-40 flex h-full w-full items-center justify-center bg-black bg-opacity-50 text-center">
+          <div
+            ref={modalRef}
+            className="relative mx-3 max-w-lg rounded-lg bg-white p-7 sm:mx-0"
+          >
+            <div className="mb-4 flex justify-center">
+              {/* Apply Tailwind CSS classes to adjust the size of the confirmation icon */}
+              <img
+                src={thankyoucheck}
+                alt="Confirmation Icon"
+                className="h-12 w-12"
+              />
+            </div>
+            <h1 className="mb-4 text-3xl font-bold">Thank You!</h1>
+            <p className="mb-10">
+              Thanks for contacting us. We will be reaching out to you soon!
+            </p>
+            <button
+              type="button"
+              onClick={closeModal}
+              className="rounded-sm bg-logoGreen px-6 py-2 font-bold text-white hover:bg-logoGreenHover"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

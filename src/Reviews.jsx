@@ -2,16 +2,15 @@
 import { useState, useEffect, useRef } from "react";
 import thankyoucheck from "./assets/thankyoucheck.png";
 import { BarLoader } from "react-spinners";
-// import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import Review from "./components/Review";
 import StarIcon from "./components/StarIcon";
 import { scrollToTop } from "./utils/scrollToTop";
 
 const Reviews = () => {
   const [isSending, setIsSending] = useState(false);
-  // const [showModal, setShowModal] = useState(false);
   const modalRef = useRef(null);
-
+  const [errorMsg, setErrorMsg] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,12 +19,7 @@ const Reviews = () => {
 
   const [sentSuccessfully, setSentSuccessfully] = useState(false);
 
-  // const openModal = () => {
-  //   setShowModal(true);
-  // };
-
   const closeModal = () => {
-    // setShowModal(false);
     setSentSuccessfully(false);
   };
 
@@ -35,39 +29,32 @@ const Reviews = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSending((prev) => !prev);
+    setIsSending(true);
+    setErrorMsg(false);
 
-    setTimeout(() => {
-      setIsSending((prev) => !prev);
-      setSentSuccessfully(true);
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
+    emailjs
+      .sendForm(
+        "service_pm4gjbs",
+        "template_1bkwyao",
+        e.target,
+        "0yFpo6v7S8OzZG-s5"
+      )
+      .then(() => {
+        setIsSending(false);
+        setSentSuccessfully(true);
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        setErrorMsg(true);
+        setIsSending(false);
+        setSentSuccessfully(false);
+        console.error("Error sending message:", error);
       });
-    }, 1900);
-
-    // clearTimeout(fakeWait);
-
-    // Replace "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", and "YOUR_USER_ID" with your actual values
-    // emailjs
-    //   .sendForm(
-    //     "service_pm4gjbs",
-    //     "template_1bkwyao",
-    //     e.target,
-    //     "0yFpo6v7S8OzZG-s5"
-    //   )
-    //   .then(() => {
-    //     alert('Your message has been sent successfully!');
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error sending message:', error);
-    //   });
   };
-
-  // useEffect(() => {
-  //   if (sentSuccessfully) openModal();
-  // }, [sentSuccessfully, openModal]);
 
   useEffect(() => {
     scrollToTop();
@@ -216,6 +203,7 @@ const Reviews = () => {
           <div className="flex justify-start">
             <button
               type="submit"
+              disabled={isSending}
               className={`mr-4 rounded-sm bg-logoGreen px-6 font-bold text-white transition-all hover:bg-logoGreenHover ${
                 isSending ? "py-5" : "py-2"
               }`}
@@ -226,7 +214,9 @@ const Reviews = () => {
                 "Submit"
               )}
             </button>
-            {sentSuccessfully ? <small>Message sent.</small> : null}
+            {errorMsg ? (
+              <small>Oops there was an error, please try again.</small>
+            ) : null}
           </div>
         </form>
       </div>
@@ -253,7 +243,7 @@ const Reviews = () => {
             <button
               type="button"
               onClick={closeModal}
-              className="  rounded-sm bg-logoGreen px-6 py-2 font-bold text-white hover:bg-logoGreenHover"
+              className="rounded-sm bg-logoGreen px-6 py-2 font-bold text-white hover:bg-logoGreenHover"
             >
               Close
             </button>
