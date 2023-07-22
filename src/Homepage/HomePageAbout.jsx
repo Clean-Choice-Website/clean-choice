@@ -1,8 +1,7 @@
 const circleDimensions = 350;
-import aboutImage from "../assets/pexels-tima-miroshnichenko-6197116.jpg";
 import Button from "../components/Button";
 
-const HomePageAbout = () => {
+const HomePageAbout = ({ aboutImage }) => {
   return (
     <section>
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-center px-9 py-16 sm:px-16 md:flex-row lg:pb-32">
