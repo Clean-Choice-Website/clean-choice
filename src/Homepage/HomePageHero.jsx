@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
-import heroImage from "../assets/hero_image.png";
-import heroImageLandscape from "../assets/hero_image-landscape.png";
 import ContactInfo from "../components/ContactInfo";
 
-const HomePageHero = ({ openModal }) => {
+const HomePageHero = ({ openModal, heroImage, heroImageLandscape }) => {
   return (
     <>
       <main>

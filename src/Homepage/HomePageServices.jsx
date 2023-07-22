@@ -1,8 +1,7 @@
-import mopping from "../assets/mopping.jpg";
 import ServiceBullet from "../components/ServiceBullet";
 import Button from "../components/Button";
 
-const HomePageServices = () => {
+const HomePageServices = ({ mopping }) => {
   return (
     <section className=" bg-gray-50">
       <div className="mx-auto max-w-6xl">
