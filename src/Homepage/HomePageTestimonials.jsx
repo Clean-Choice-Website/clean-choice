@@ -1,8 +1,7 @@
 import Testimonial from "../components/Testimonial";
 import Button from "../components/Button";
-import wavebg from "../assets/wavebg.png";
 
-const HomePageTestimonials = () => {
+const HomePageTestimonials = ({ wavebg }) => {
   return (
     <section className="relative">
       <div className="absolute inset-0 ">
