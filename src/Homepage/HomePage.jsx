@@ -1,22 +1,81 @@
 /* eslint-disable react/prop-types */
-import { useEffect } from 'react';
-import { scrollToTop } from '../utils/scrollToTop';
-import HomePageHero from './HomePageHero';
-import HomePageAbout from './HomePageAbout';
-import HomePageServices from './HomePageServices';
-import HomePageTestimonials from './HomePageTestimonials';
+import { useEffect, useState } from "react";
+import { scrollToTop } from "../utils/scrollToTop";
+import { MoonLoader } from "react-spinners";
+import HomePageHero from "./HomePageHero";
+import HomePageAbout from "./HomePageAbout";
+import HomePageServices from "./HomePageServices";
+import HomePageTestimonials from "./HomePageTestimonials";
+import aboutImage from "../assets/pexels-tima-miroshnichenko-6197116.jpg";
+import heroImage from "../assets/hero_image.png";
+import heroImageLandscape from "../assets/hero_image-landscape.png";
+import mopping from "../assets/mopping.jpg";
+import wavebg from "../assets/wavebg.png";
 
 const HomePage = ({ openModal }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    scrollToTop();
+    const loadImages = () => {
+      const imagePromises = [
+        new Promise((resolve) => {
+          const img1 = new Image();
+          img1.src = aboutImage;
+          img1.onload = resolve;
+        }),
+        new Promise((resolve) => {
+          const img2 = new Image();
+          img2.src = heroImage;
+          img2.onload = resolve;
+        }),
+        new Promise((resolve) => {
+          const img3 = new Image();
+          img3.src = heroImageLandscape;
+          img3.onload = resolve;
+        }),
+        new Promise((resolve) => {
+          const img4 = new Image();
+          img4.src = mopping;
+          img4.onload = resolve;
+        }),
+        new Promise((resolve) => {
+          const img5 = new Image();
+          img5.src = wavebg;
+          img5.onload = resolve;
+        }),
+      ];
+
+      Promise.all(imagePromises).then(() => {
+        setIsLoading(false);
+        scrollToTop();
+      });
+    };
+
+    // Set the loading state to true initially
+    setIsLoading(true);
+
+    // Call the function to load the images
+    loadImages();
   }, []);
 
   return (
     <>
-      <HomePageHero openModal={openModal} />
-      <HomePageAbout />
-      <HomePageServices />
-      <HomePageTestimonials />
+      {isLoading ? (
+        <div className="flex min-h-screen items-center justify-center">
+          <MoonLoader color={"#497429"} />
+        </div>
+      ) : (
+        <>
+          <HomePageHero
+            openModal={openModal}
+            heroImage={heroImage}
+            heroImageLandscape={heroImageLandscape}
+          />
+          <HomePageAbout aboutImage={aboutImage} />
+          <HomePageServices mopping={mopping} />
+          <HomePageTestimonials wavebg={wavebg} />
+        </>
+      )}
     </>
   );
 };
