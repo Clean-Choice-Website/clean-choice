@@ -62,7 +62,7 @@ const Services = ({ openModal }) => {
                   Serving Waukesha and Milwaukee Counties for over 10 years
                 </p>
               </div>
-              <div className="mx-8 flex flex-col gap-6 lg:mx-0">
+              <div className="flex flex-col gap-6 lg:mx-0">
                 <ServicesContent
                   image={CommercialCleaning}
                   name={"Commercial Cleaning"}
