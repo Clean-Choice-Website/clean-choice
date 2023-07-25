@@ -22,7 +22,7 @@ const AboutUs = () => {
   return (
     <div>
       {isLoading ? (
-        <div className="flex min-h-screen items-center justify-center">
+        <div className="flex h-screen items-center justify-center">
           <MoonLoader color={"#497429"} />
         </div>
       ) : (
@@ -35,7 +35,7 @@ const AboutUs = () => {
                   Serving Waukesha and Milwaukee Counties for over 10 years
                 </p>
               </div>
-              <div className="pr-8 md:flex md:max-w-7xl md:flex-row md:gap-4">
+              <div className="md:flex md:max-w-7xl md:flex-row md:gap-4 md:pr-8">
                 <div className="items-start">
                   <h1 className="text-center text-3xl font-bold md:mx-8 md:text-left">
                     About Us
