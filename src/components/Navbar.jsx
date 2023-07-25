@@ -30,7 +30,12 @@ function Navbar({ openModal }) {
           onClick={() => setShowMenu((prev) => !prev)}
           className="block md:hidden"
         >
-          <img src={menuIcon} alt="menu dropdown icon" className="w-10" />
+          <img
+            src={menuIcon}
+            alt="menu dropdown icon"
+            data-label="menu-icon"
+            className="w-10"
+          />
         </button>
         {/* Nav links */}
         <div className="ml-auto hidden items-center gap-8 md:flex">
