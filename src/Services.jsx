@@ -48,7 +48,7 @@ const Services = ({ openModal }) => {
   return (
     <div>
       {isLoading ? (
-        <div className="flex min-h-screen items-center justify-center">
+        <div className="flex h-screen items-center justify-center">
           <MoonLoader color={"#497429"} />
         </div>
       ) : (
