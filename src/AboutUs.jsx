@@ -30,53 +30,49 @@ const AboutUs = () => {
           <ContactInfo />
           <div className="mx-auto max-w-7xl">
             <section className="flex flex-col items-center justify-between py-4 md:items-start">
-              <h1 className="mt-4 text-3xl font-bold md:mx-8">About Us</h1>
               <div className="mx-8 w-full py-4 md:mx-0">
                 <p className="mx-8 rounded-md bg-logoGreen py-4 text-center text-xl font-bold text-white">
                   Serving Waukesha and Milwaukee Counties for over 10 years
                 </p>
               </div>
-              <div className="items-center pr-8 md:flex md:max-w-7xl md:flex-row md:gap-4">
+              <div className="pr-8 md:flex md:max-w-7xl md:flex-row md:gap-4">
                 <div className="items-start">
-                  <p className="px-8 py-2 md:pr-4">
-                    Our environmentally repsonsible approach focuses on the
-                    proper training and use of cleaning solutions as well as
-                    proper disposal of any harsh detergents or cleaning
-                    compounds. Below are some of the ways we achieve this level
-                    of clean:
+                  <h1 className="text-center text-3xl font-bold md:mx-8 md:text-left">
+                    About Us
+                  </h1>
+                  <p className="px-8 py-2 font-bold">
+                    Experience the Clean Choice advantage!
                   </p>
                   <p className="px-8 py-2 md:pr-4">
-                    All of our cleaners are employees and trained to provide
-                    only the very best in quality cleaning services for your
-                    company.
-                  </p>
-                  <p className=" px-8 py-2 md:pr-4">
-                    Commercial Cleaning is usually done after business hours and
-                    or on weekends. We can also accommodate your daytime
-                    cleaning needs.
+                    With over a decade of trusted service, our loyal clientele
+                    knows they can rely on us. Our skilled and motivated
+                    cleaners uphold the highest standards, delivering top-notch
+                    and consistent services. We put our clients first, offering
+                    a 24/7 phone line, environmentally responsible practices,
+                    and personalized proposals, ensuring absolute satisfaction
+                    with every meticulously cleaned facility.
                   </p>
                 </div>
                 <img
-                  className="hidden md:block md:h-64 lg:h-52"
+                  className="hidden align-top md:block md:h-64 lg:h-52"
                   src={CleaningImg}
                   alt="Cleaning Image"
                 />
               </div>
             </section>
             <section className="flex flex-col items-center justify-between py-4 md:items-start">
-              <h1 className=" text-3xl font-bold md:mx-8">Our Mission</h1>
+              <h1 className="text-3xl font-bold md:mx-8">Our Mission</h1>
               <div className="items-start">
                 <p className="px-8 py-2 font-bold">
                   We care about being your first choice and make it our goal to
                   provide exceptional customer service
                 </p>
                 <p className="px-8 py-2">
-                  Clean choice focuses on providing the best janitorial services
-                  that help reduce contaminants harming our earth and promote
-                  sustainability. Our envirionmentally responsible approach
-                  focuses on the proper training and use of cleaning solutions,
-                  as well as proper disposal of any harsh detergents / cleaning
-                  compounds.
+                  Our mission is to make Clean Choice the first choice and most
+                  trusted premier cleaning business in the greater Milwaukee
+                  area. We will provide a safe and healthy environment for our
+                  customers through our consistent, top quality cleaning
+                  services.
                 </p>
               </div>
             </section>
@@ -89,12 +85,12 @@ const AboutUs = () => {
                   your cleaning needs.
                 </p>
                 <p className="px-8 py-2">
-                  Clean choice focuses on providing the best janitorial services
-                  that help reduce contaminants harming our earth and promote
-                  sustainability. Our envirionmentally responsible approach
-                  focuses on the proper training and use of cleaning solutions,
-                  as well as proper disposal of any harsh detergents / cleaning
-                  compounds.
+                  At Clean Choice, our focus is on providing exceptional
+                  janitorial services with an environmentally responsible
+                  approach. With our commitment to cleanliness and
+                  sustainability, you can trust us to deliver the highest
+                  quality of service while caring for your facilities and the
+                  well-being of those within.
                 </p>
               </div>
             </section>
