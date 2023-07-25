@@ -35,12 +35,12 @@ const HomePageAbout = ({ aboutImage }) => {
               Serving the South Eastern Wisconsin area for over 10 years
             </h4>
             <p className="font-light">
-              Our highest standards for cleanliness keep our well trained and
-              motivated cleaners focused on delivering a top-quality, consistent
+              Our highest standards for cleanliness keep our well-trained and
+              motivated cleaners focused on delivering top-quality, consistent
               service. We go the extra mile for our clients with our 24/7 phone
               line, environmentally responsible approach, and free custom
-              proposals to ensure our customer’s facilities are cleaned to their
-              highest standards.
+              proposals to ensure our customers' facilities are cleaned to their
+              utmost satisfaction.
             </p>
             <div className="mx-auto md:mx-0">
               <Button to={"about"}>Learn More</Button>
