@@ -61,7 +61,7 @@ const HomePage = ({ openModal }) => {
   return (
     <>
       {isLoading ? (
-        <div className="flex h-screen items-center justify-center">
+        <div className="mt-40 flex h-screen items-start justify-center">
           <MoonLoader color={"#497429"} />
         </div>
       ) : (
