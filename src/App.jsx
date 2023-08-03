@@ -12,7 +12,7 @@ import Reviews from "./Reviews";
 
 function NotFound() {
   return (
-    <div className="mx-8 mt-32 flex h-screen flex-col items-center justify-start gap-12 text-xl md:text-4xl">
+    <div className="mx-4 mt-32 flex h-screen flex-col items-center justify-start gap-12 text-xl sm:mx-8 md:text-4xl">
       <h1 className="text-center">404 - Not Found</h1>
       <p className="text-center">
         The page you are looking for does not exist.
