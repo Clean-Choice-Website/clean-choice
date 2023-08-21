@@ -3,6 +3,7 @@ import CleaningImg from "./assets/AboutUs.png";
 import { useEffect, useState } from "react";
 import { scrollToTop } from "./utils/scrollToTop";
 import { MoonLoader } from "react-spinners";
+import { Helmet } from "react-helmet";
 
 const AboutUs = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +22,15 @@ const AboutUs = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          About Clean Choice WI | Commercial Cleaning in the Milwaukee, WI Area
+        </title>
+        <meta
+          name="description"
+          content="Learn about Clean Choice WI. A commercial cleaning and janitorial services company that operates in the Milwaukee, WI area."
+        />
+      </Helmet>
       {isLoading ? (
         <div className="mt-40 flex h-screen items-start justify-center">
           <MoonLoader color={"#497429"} />
