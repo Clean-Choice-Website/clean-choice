@@ -7,6 +7,7 @@ import application from "./assets/Employment.pdf";
 import { scrollToTop } from "./utils/scrollToTop";
 import Indeed from "./assets/indeed.png";
 import { MoonLoader } from "react-spinners";
+import { Helmet } from "react-helmet";
 
 const Careers = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -87,6 +88,13 @@ const Careers = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Commercial Cleaning Jobs | Clean Choice WI Careers</title>
+        <meta
+          name="description"
+          content="Explore commercial cleaning and janitorial jobs at Clean Choice WI, primarily operating out of the Milwaukee, WI area. View our open positions to get started with a rewarding career in the cleaning industry."
+        />
+      </Helmet>
       {isLoading ? (
         <div className="mt-40 flex h-screen items-start justify-center">
           <MoonLoader color={"#497429"} />
