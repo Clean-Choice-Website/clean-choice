@@ -11,6 +11,7 @@ import heroImage from "../assets/hero_image.png";
 import heroImageLandscape from "../assets/hero_image-landscape.png";
 import mopping from "../assets/mopping.jpg";
 import wavebg from "../assets/wavebg.png";
+import { Helmet } from "react-helmet";
 
 const HomePage = ({ openModal }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -60,6 +61,16 @@ const HomePage = ({ openModal }) => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Clean Choice WI Homepage | Overview of Clean Choice WI Serving the
+          Milwaukee, WI Area
+        </title>
+        <meta
+          name="description"
+          content="Home page of Clean Choice WI. Includes services (commercial cleaning, carpet cleaning, and floor care and tile re-waxing), about us and customer reviews."
+        />
+      </Helmet>
       {isLoading ? (
         <div className="mt-40 flex h-screen items-start justify-center">
           <MoonLoader color={"#497429"} />
