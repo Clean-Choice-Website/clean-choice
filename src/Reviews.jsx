@@ -6,6 +6,7 @@ import emailjs from "emailjs-com";
 import Review from "./components/Review";
 import StarIcon from "./components/StarIcon";
 import { scrollToTop } from "./utils/scrollToTop";
+import { Helmet } from "react-helmet";
 
 const Reviews = () => {
   const [isSending, setIsSending] = useState(false);
@@ -76,7 +77,14 @@ const Reviews = () => {
   }, [handleOutsideClick]);
 
   return (
-    <div className=" bg-slate-100 pb-8">
+    <div className="bg-slate-100 pb-8">
+      <Helmet>
+        <title>Customer Reviews of Clean Choice WI | Write a Review</title>
+        <meta
+          name="description"
+          content="Customer reviews of Clean Choice WI. Hear what those that use Clean Choice WI for their commercial cleaning / janitorial needs have to say about the company or leave your own review."
+        />
+      </Helmet>
       <div className="mb-12 flex flex-col  items-center bg-logoGreen py-5">
         <h1 className="mb-1 text-center text-3xl font-semibold text-white">
           Reviews
