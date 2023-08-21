@@ -16,6 +16,7 @@ import CommercialCleaning from "./assets/CommercialCleaning.png";
 import FloorCare from "./assets/FloorCare.png";
 import ContactInfo from "./components/ContactInfo";
 import ServicesContent from "./components/ServicesContent";
+import { Helmet } from "react-helmet";
 
 const Services = ({ openModal }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +48,16 @@ const Services = ({ openModal }) => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Clean Choice WI Services | Commercial Cleaning, Carpet Cleaning and
+          Floor Care & Tile Re-waxing
+        </title>
+        <meta
+          name="description"
+          content="Clean Choice WI offers commercial cleaning, carpet cleaning, and floor care & tile re-waxing services primarily operating out of the Milwaukee, WI area."
+        />
+      </Helmet>
       {isLoading ? (
         <div className="mt-40 flex h-screen items-start justify-center">
           <MoonLoader color={"#497429"} />
