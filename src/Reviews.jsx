@@ -79,10 +79,13 @@ const Reviews = () => {
   return (
     <div className="bg-slate-100 pb-8">
       <Helmet>
-        <title>Customer Reviews of Clean Choice WI | Write a Review</title>
+        <title>
+          Clean Choice Wisconsin Reviews | Milwaukee Commercial Cleaning, Office
+          Cleaning and Janitorial Services
+        </title>
         <meta
           name="description"
-          content="Customer reviews of Clean Choice WI. Hear what those that use Clean Choice WI for their commercial cleaning / janitorial needs have to say about the company or leave your own review."
+          content="Customer reviews of Clean Choice Wisconsin. Hear what those that use our services for their commercial cleaning, office cleaning and janitorial needs have to say about the company or leave your own review."
         />
       </Helmet>
       <div className="mb-12 flex flex-col  items-center bg-logoGreen py-5">
