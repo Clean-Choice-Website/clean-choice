@@ -63,8 +63,8 @@ const HomePage = ({ openModal }) => {
     <>
       <Helmet>
         <title>
-          Clean Choice WI Homepage | Overview of Clean Choice WI Serving the
-          Milwaukee, WI Area
+          Clean Choice Wisconsin | Milwaukee Commercial Cleaning, Office
+          Cleaning and Janitorial Services
         </title>
         <meta
           name="description"
