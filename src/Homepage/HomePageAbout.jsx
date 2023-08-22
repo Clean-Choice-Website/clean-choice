@@ -32,7 +32,8 @@ const HomePageAbout = ({ aboutImage }) => {
               About Us
             </h3>
             <h4 className="text-center text-lg font-bold md:text-left">
-              Serving the South Eastern Wisconsin area for over 10 years
+              Serving Milwaukee, Wisconsin, and the surrounding areas for over
+              10 years
             </h4>
             <p className="font-light">
               Our highest standards for cleanliness keep our well-trained and

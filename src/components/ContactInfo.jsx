@@ -17,7 +17,7 @@ const ContactInfo = () => {
       </div>
       <div className="flex items-center gap-2 font-bold">
         <img src={pin} alt="Map pin icon" className="w-6" />
-        <p>Southeastern WI</p>
+        <p>Milwaukee, WI</p>
       </div>
     </div>
   );

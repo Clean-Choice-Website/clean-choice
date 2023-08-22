@@ -24,11 +24,12 @@ const AboutUs = () => {
     <div>
       <Helmet>
         <title>
-          About Clean Choice WI | Commercial Cleaning in the Milwaukee, WI Area
+          Clean Choice Wisconsin About Us | Milwaukee Commercial Cleaning,
+          Office Cleaning and Janitorial Services
         </title>
         <meta
           name="description"
-          content="Learn about Clean Choice WI. A commercial cleaning and janitorial services company that operates in the Milwaukee, WI area."
+          content="Learn about Clean Choice Wisconsin. A commercial cleaning, office cleaning and janitorial services company that operates in the Milwaukee, Wisconsin area."
         />
       </Helmet>
       {isLoading ? (
