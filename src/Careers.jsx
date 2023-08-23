@@ -106,8 +106,8 @@ const Careers = () => {
         <div>
           <ContactInfo />
           <div className="items-center bg-slate-100 py-8 md:flex md:flex-col md:justify-center md:align-top">
-            <div className="md:ml-14a">
-              <div className=" mx-auto w-80 text-center md:w-auto">
+            <div>
+              <div className="mx-auto w-80 text-center md:w-auto">
                 <h1 className="mb-5 pt-10 text-4xl font-bold md:mt-0 md:text-5xl">
                   Start a Career with us today!
                 </h1>
@@ -123,7 +123,7 @@ const Careers = () => {
                   rel="noreferrer"
                 >
                   <button className="rounded-md bg-[#2457A7] px-6 py-3 text-center font-bold text-white transition-all hover:bg-[#2440a7]">
-                    <div className=" inline-flex gap-2">
+                    <div className="inline-flex gap-2">
                       Apply with Indeed{" "}
                       <img className="w-6" src={Indeed} alt="Indeed Icon" />
                     </div>
@@ -131,9 +131,23 @@ const Careers = () => {
                 </a>
               </div>
             </div>
+            <div className="mx-auto my-8 max-w-sm md:max-w-xl">
+              <h3 className="mx-10 mb-3 text-center font-bold sm:mx-0">
+                Why Work For Us?
+              </h3>
+              <p className="mx-10 text-left sm:mx-0">
+                Join our team of dedicated cleaners and transform spaces into
+                sparkling, welcoming environments that leave a lasting impact.
+                As a cleaner, you'll play a crucial role in maintaining the
+                cleanliness and hygiene standards that our clients depend on.
+                Experience the satisfaction of seeing immediate results and
+                knowing that your work contributes to healthier, safer
+                workplaces for our clients and their employees.
+              </p>
+            </div>
             <form
               onSubmit={handleSubmit}
-              className="mx-auto mt-5 w-72 space-y-5 md:mx-14 md:w-96"
+              className="mx-auto w-72 space-y-5 md:mx-14 md:w-96"
             >
               <h4 className="text-md text-center font-semibold">
                 Download an application{" "}
