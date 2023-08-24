@@ -23,6 +23,20 @@ const AboutUs = () => {
   return (
     <div>
       <Helmet>
+        {/* Google Analytics tracking code */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-1CGBG1QG79"
+        ></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1CGBG1QG79');
+          `}
+        </script>
         <title>
           Clean Choice Wisconsin About Us | Milwaukee Commercial Cleaning,
           Office Cleaning and Janitorial Services
