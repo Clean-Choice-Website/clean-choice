@@ -42,9 +42,10 @@ const AboutUs = () => {
           <div className="mx-auto max-w-7xl">
             <section className="flex flex-col items-center justify-between py-4 md:items-start">
               <div className="mx-8 w-full py-4 md:mx-0">
-                <p className="mx-8 rounded-md bg-logoGreen py-4 text-center text-xl font-bold text-white">
-                  Serving Waukesha and Milwaukee Counties for over 10 years
-                </p>
+                <h1 className="mx-8 rounded-md bg-logoGreen py-4 text-center text-xl font-bold text-white">
+                  Professional Commercial Cleaning, Office Cleaning and
+                  Janitorial Services
+                </h1>
               </div>
               <div className="md:flex md:max-w-7xl md:flex-row md:gap-4 md:pr-8">
                 <div className="items-start">
