@@ -7,6 +7,7 @@ import Review from "./components/Review";
 import StarIcon from "./components/StarIcon";
 import { scrollToTop } from "./utils/scrollToTop";
 import { Helmet } from "react-helmet";
+import ContactInfo from "./components/ContactInfo";
 
 const Reviews = () => {
   const [isSending, setIsSending] = useState(false);
@@ -102,6 +103,7 @@ const Reviews = () => {
           content="Customer reviews of Clean Choice Wisconsin. Hear what those that use our services for their commercial cleaning, office cleaning and janitorial needs have to say about the company or leave your own review."
         />
       </Helmet>
+      <ContactInfo />
       <div className="mb-12 flex flex-col  items-center bg-logoGreen py-5">
         <h1 className="mb-1 text-center text-3xl font-semibold text-white">
           Reviews
