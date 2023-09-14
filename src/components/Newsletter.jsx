@@ -9,7 +9,7 @@ const Newsletter = () => {
           href={Letter}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline hover:text-[#c4da50]"
+          className="underline transition-all hover:text-[#c4da50]"
         >
           here
         </a>
