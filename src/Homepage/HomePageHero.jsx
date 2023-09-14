@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import ContactInfo from "../components/ContactInfo";
+import Newsletter from "../components/Newsletter";
 
 const HomePageHero = ({ openModal, heroImage, heroImageLandscape }) => {
   return (
@@ -7,6 +8,9 @@ const HomePageHero = ({ openModal, heroImage, heroImageLandscape }) => {
       <main>
         <div className="sm:hidden">
           <ContactInfo />
+        </div>
+        <div className="hidden sm:block">
+          <Newsletter />
         </div>
         <section className="relative w-full">
           <img
@@ -41,6 +45,9 @@ const HomePageHero = ({ openModal, heroImage, heroImageLandscape }) => {
         {/* Contact info div */}
         <div className="hidden sm:block">
           <ContactInfo />
+        </div>
+        <div className="sm:hidden">
+          <Newsletter />
         </div>
       </main>
     </>
