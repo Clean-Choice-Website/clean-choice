@@ -59,12 +59,20 @@ function Navbar({ openModal }) {
               Careers
             </li>
           </Link>
-          <button
+          {/* <button
             onClick={openModal}
-            className="rounded-sm bg-logoGreen  p-2 px-5 font-medium text-white transition-all hover:bg-logoGreenHover"
+            className="rounded-sm bg-logoGreen p-2 px-5 font-medium text-white transition-all hover:bg-logoGreenHover"
           >
             Get a Quote
-          </button>
+          </button> */}
+          <a
+            href="https://clienthub.getjobber.com/client_hubs/56b487ed-d4dd-4556-a387-aba7135c7983/public/work_request/new?source=social_media"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-sm bg-logoGreen p-2 px-5 font-medium text-white transition-all hover:bg-logoGreenHover"
+          >
+            Get a Quote
+          </a>
         </div>
       </nav>
       {/* Mobile Nav */}

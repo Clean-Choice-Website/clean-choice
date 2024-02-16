@@ -177,10 +177,10 @@ const Careers = () => {
                 <br></br>
                 email to{" "}
                 <a
-                  href="mailto:michelle@cleanchoicewi.com"
+                  href="mailto:info@cleanchoicewi.com"
                   className="transition-all hover:text-logoGreen"
                 >
-                  michelle@cleanchoicewi.com
+                  info@cleanchoicewi.com
                 </a>
                 <br></br>
                 <br></br>
