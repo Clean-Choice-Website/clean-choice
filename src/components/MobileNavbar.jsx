@@ -74,12 +74,20 @@ const MobileNavbar = ({ setShowMenu, openModal }) => {
             onClick={() => setShowMenu(false)}
             className="m-2 flex justify-center"
           >
-            <button
+            {/* <button
               onClick={openModal}
               className="mb-3 w-full rounded border-2 border-white bg-logoGreen px-8 py-2 text-center text-lg font-bold text-white transition-all hover:bg-logoGreenHover"
             >
               Get a Quote
-            </button>
+            </button> */}
+            <a
+              href="https://clienthub.getjobber.com/client_hubs/56b487ed-d4dd-4556-a387-aba7135c7983/public/work_request/new?source=social_media"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-sm bg-logoGreen p-2 px-5 font-medium text-white transition-all hover:bg-logoGreenHover"
+            >
+              Get a Quote
+            </a>
           </div>
           {/* </Link> */}
           <li className="flex justify-center gap-2 border-b border-gray-300 py-4 text-slate-500">

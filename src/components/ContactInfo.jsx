@@ -11,8 +11,8 @@ const ContactInfo = () => {
       </div>
       <div className="flex items-center gap-2 font-bold">
         <img src={email} alt="Email icon" className="w-7" />
-        <a href="mailto:michelle@cleanchoicewi.com">
-          <p>michelle@cleanchoicewi.com</p>
+        <a href="mailto:info@cleanchoicewi.com">
+          <p>info@cleanchoicewi.com</p>
         </a>
       </div>
       <div className="flex items-center gap-2 font-bold">

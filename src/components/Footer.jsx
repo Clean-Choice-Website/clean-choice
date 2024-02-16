@@ -65,10 +65,10 @@ function Footer({ openModal }) {
                     <li>(414) 310-9206</li>
                   </a>
                   <a
-                    href="mailto:michelle@cleanchoicewi.com"
+                    href="mailto:info@cleanchoicewi.com"
                     className="transition-all hover:text-logoGreen"
                   >
-                    <li>michelle@cleanchoicewi.com</li>
+                    <li>info@cleanchoicewi.com</li>
                   </a>
                 </ul>
               </div>
