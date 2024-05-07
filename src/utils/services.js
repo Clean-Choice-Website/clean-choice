@@ -5,20 +5,20 @@ export const commercialList = [
 ];
 export const carpetList = [
   "Specialized spring cleaning, tackling salt and dirt brought in during the colder months",
-  "Enhance your office space, impressing both employees and customers",
+  "Our floor scrubbing process effectively tackles stubborn dirt and grime that regular mopping can't handle",
   "Quick response for unexpected spills, water leaks, or accidents - we've got you covered",
 ];
 export const floorList = [
-  "Our specialized floor scrubbing process effectively tackles stubborn dirt and grime that regular mopping can't handle",
-  "Renew your tiles with our rewaxing service, providing a durable barrier against stains and wear for long-lasting floors",
-  "Protect and extend your hard surface floors' lifespan, avoiding unnecessary expenses",
+  "Our one-time deep cleaning service ensures every nook and cranny of your space is meticulously cleaned, leaving it spotless and refreshed",
+  "We tailor our deep cleaning services to meet your specific needs, whether it's targeting high-traffic areas or addressing specific cleaning challenges",
+  "Give your space a fresh start with our one-time deep cleaning, perfect for seasonal cleanings, special events, or just to maintain a pristine environment",
 ];
 export const commercialInfo =
   "Hiring a professional commercial cleaner ensures a pristine and inviting workspace that leaves a lasting impression on clients and employees alike, promoting a positive and productive environment.";
 export const carpetInfo =
-  "We use hot water extraction technology and premium carpet cleaning chemicals to deliver outstanding results. Our expert team ensures deep cleaning, leaving your carpets fresh, stain-free, and looking like new again.";
+  "Our carpet cleaning process uses hot water extraction technology and premium chemicals to get your carpets fresh, stain-free, and looking like new again. Our meticulous floor scrubbing process effectively tackles stubborn dirt and grime that regular mopping can't handle.";
 export const floorInfo =
-  "With our expertise in floor care, we'll revitalize your floors, bringing back their natural luster and leaving them looking as good as new. Expertly strip away old floor finishes, dirt, and grime, then apply high-quality wax for a long-lasting, brilliant shine that transforms your floors.";
+  "Our deep cleaning service revitalizes your facility leaving it refreshed and renewed. With our flexibility and no long term contracts, we can create a budgeted plan tailored to your specific needs.";
 export const row =
   "mb-4 md:mb-12 md:flex md:max-w-7xl md:flex-row md:items-center lg:gap-8";
 export const rowReverse =

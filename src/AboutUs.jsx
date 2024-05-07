@@ -1,5 +1,5 @@
 import ContactInfo from "./components/ContactInfo";
-import CleaningImg from "./assets/AboutUs.png";
+import CleaningImg from "./assets/AlexClean.jpg";
 import { useEffect, useState } from "react";
 import { scrollToTop } from "./utils/scrollToTop";
 import { MoonLoader } from "react-spinners";
@@ -56,7 +56,7 @@ const AboutUs = () => {
           <div className="mx-auto max-w-7xl">
             <section className="flex flex-col items-center justify-between py-4 md:items-start">
               <div className="mx-8 w-full py-4 md:mx-0">
-                <h1 className="mx-8 rounded-md bg-logoGreen py-4 text-center text-xl font-bold text-white">
+                <h1 className="mx-8 rounded-md bg-logoGreen px-4 py-4 text-center text-xl font-bold text-white sm:px-0">
                   Professional Commercial Cleaning, Office Cleaning and
                   Janitorial Services
                 </h1>

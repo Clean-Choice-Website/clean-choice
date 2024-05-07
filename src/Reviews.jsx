@@ -118,6 +118,24 @@ const Reviews = () => {
       </div>
 
       <div className="flex flex-col gap-6">
+        <Review name="Jet In MKE">
+          We are a FBO at Mitchell airport and have been using Clean Choice for
+          over a year. They are very professional and pay attention to detail.
+          Their staff is friendly and communicate well with us. They are also
+          flexible as aircraft sometimes modify our plans. I would highly
+          recommend this service to anyone looking. Michelle the owner checks in
+          regularly so we can update any services. We appreciate her above and
+          beyond attitude.
+        </Review>
+        <Review name="Peak Performance Fitness Facility">
+          We are a gym located in Greendale, and we recently enlisted Clean
+          Choice to clean our facility. Michelle and Alex were easy to work
+          with, maintaining clear communication throughout. We were particularly
+          impressed by the thoroughness of their work, especially in the
+          bathrooms. The sinks were previously covered with water stains and are
+          now spotless. We highly recommend Clean Choice to anyone in need of
+          top-notch cleaning services!
+        </Review>
         <Review name={"Brandon Neddef"}>
           {`Good service and friendly staff. Staff is very friendly, punctual and thorough!`}
         </Review>

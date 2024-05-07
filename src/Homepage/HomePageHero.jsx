@@ -26,7 +26,7 @@ const HomePageHero = ({ openModal, heroImage, heroImageLandscape }) => {
           {/* Div of text that overlays hero image */}
           <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col gap-4 text-center text-white sm:left-0 sm:mx-16 sm:w-auto sm:-translate-x-0 sm:text-left xl:mx-40 2xl:mx-48">
             <h2 className="text-xl font-light">
-              Quality cleaning at a fair price.
+              Premium commercial cleaning services.
             </h2>
             <h1 className="text-3xl font-bold sm:text-5xl">
               State of the art <br /> cleaning techniques
