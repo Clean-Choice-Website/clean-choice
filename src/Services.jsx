@@ -99,14 +99,14 @@ const Services = ({ openModal }) => {
                 />
                 <ServicesContent
                   image={CleaningImg}
-                  name={"Carpet Cleaning"}
+                  name={"Carpet Cleaning & Floor Scrubbing"}
                   list={carpetList}
                   info={carpetInfo}
                   row={rowReverse}
                 />
                 <ServicesContent
                   image={FloorCare}
-                  name={"Floor Care & Tile Re-waxing"}
+                  name={"One-Time Deep Cleaning"}
                   list={floorList}
                   info={floorInfo}
                   row={row}
