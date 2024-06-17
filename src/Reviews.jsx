@@ -146,19 +146,18 @@ const Reviews = () => {
         </Review>
         <Review name={"Lisa Turnacliff"}>
           Clean Choice has done a good job. They are reliable and follow up with
-          an concerns or questions that arise. I like the open communication
-          between myself, the cleaners and Chad, the owner. I would recommend
-          Clean Choice to anyone who is in the market for a new cleaning
-          company.
+          any concerns or questions that arise. I like the open communication
+          between myself, the cleaners, and the owner. I would recommend Clean
+          Choice to anyone who is in the market for a new cleaning company.
         </Review>
         <Review name={"Jackie Hall"}>
-          Great Service, easy to work with and everyone is very friendly! Chad,
-          the owner, is very attentive and helpful. He is easy to work with and
-          always making sure his workers are doing a good job. Chad always looks
-          to make things easier and more efficient for his employees to be able
-          to do their job better. Clean Choice also did our carpet cleaning.
-          They come twice a week to clean and do a great job. I highly recommend
-          Clean Choice for your custodial needs.
+          Great Service, easy to work with and everyone is very friendly! The
+          owner is very attentive and helpful. She is easy to work with and
+          always making sure her workers are doing a good job. Michelle always
+          looks to make things easier and more efficient for her employees to be
+          able to do their job better. Clean Choice also did our carpet
+          cleaning. They come twice a week to clean and do a great job. I highly
+          recommend Clean Choice for your custodial needs.
         </Review>
         <Review name={"James Hendley"}>
           Smooth execution of office carpet cleaning. I highly recommend Clean
@@ -167,49 +166,46 @@ const Reviews = () => {
         </Review>
         <Review name={"Janet Rortvedt"}>
           Ridgestone Bank has been with Clean Choice since 2011. The thing I
-          enjoy the most is that Chad, the owner, is very involved and EXTREMELY
+          enjoy the most is that the owner is very involved and EXTREMELY
           responsive when we have a concern or question. There has been
           occasional turn over of the on site cleaning staff and things can be
           missed when a new cleaner begins - talking with Chad clears any of our
           concerns as soon as we voice them.
         </Review>
         <Review name={"Jody Giacomini"}>
-          Clean Choice is always receptive to any needs. Clean choice is always
-          receptive to any needs, requirements, or changes that we have needed
-          in the past. They strive to provide quality employees for our cleaning
-          needs. We have a very challenging work environment and they are very
-          good about understanding this dynamic. We have been very pleased, in
-          the past, and the improvements are evident of late as well.
+          Clean choice is always receptive to any needs, requirements, or
+          changes that we have needed in the past. They strive to provide
+          quality employees for our cleaning needs. We have a very challenging
+          work environment and they are very good about understanding this
+          dynamic. We have been very pleased, in the past, and the improvements
+          are evident of late as well.
         </Review>
         <Review name={"Kathy K."}>
           Did a great job. Did a great job in our manufacturing facility. Very
           reasonably priced.
         </Review>
         <Review name={"Luann Nevius"}>
-          Clean Choice does a great job keeping our office clean. Clean Choice
-          does a great job keeping our office clean.
+          Clean Choice does a great job keeping our office clean.
         </Review>
         <Review name={"April Blok"}>
           Clean Choice has been such a great company to have clean our offices.
-          Full Review: Clean Choice has been such a great company to have clean
-          our offices. Chad & Mike both go above and beyond to check in and make
-          sure that we are happy with the services that are being provided.
-          Clean Choice has also been a great help with our company, as we are a
-          General Contractor. We had one of our cleaning companies back out on a
-          job, and Chad was able to step in last minute to be able to fulfill
+          The owners' both go above and beyond to check in and make sure that we
+          are happy with the services that are being provided. Clean Choice has
+          also been a great help with our company, as we are a General
+          Contractor. We had one of our cleaning companies back out on a job,
+          and Clean Choice was able to step in last minute to be able to fulfill
           the services that we needed.
         </Review>
         <Review name={"Kris Nelson"}>
           We are a small, independent, private school and we were looking for
-          quality cleaning on a budget. Chad at Clean Choice has provided that
-          to us. From stripping and waxing our CVT flooring and making them
-          shine, to getting out years of old stains from our carpets, we
-          couldn't be more pleased. Chad is very responsive to all of our needs
-          and responds quickly to any concerns that may arise. He has also gone
-          above and beyond to help do other things around the school as well
-          (from helping replace lighting, to fixing doors and other maintenance
-          items). Thank you, Chad and Company for being such a great resource
-          for us!
+          quality cleaning on a budget. Clean Choice has provided that to us.
+          From stripping and waxing our CVT flooring and making them shine, to
+          getting out years of old stains from our carpets, we couldn't be more
+          pleased. The owner is very responsive to all of our needs and responds
+          quickly to any concerns that may arise. She has also gone above and
+          beyond to help do other things around the school as well (from helping
+          replace lighting, to fixing doors and other maintenance items). Thank
+          you, Clean Choice for being such a great resource for us!
         </Review>
       </div>
       <div className="mt-16 text-center">
