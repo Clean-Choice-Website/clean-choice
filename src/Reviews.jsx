@@ -99,7 +99,7 @@ const Reviews = () => {
         </title>
         <meta
           name="description"
-          content="Customer reviews of Clean Choice Wisconsin. Hear what those that use our services for their commercial cleaning, office cleaning and janitorial needs have to say about the company or leave your own review."
+          content="Read customer reviews of Clean Choice Wisconsin. See what clients say about our commercial and office cleaning services or leave your own review."
         />
       </Helmet>
       <ContactInfo />

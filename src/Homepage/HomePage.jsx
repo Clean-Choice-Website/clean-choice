@@ -79,7 +79,7 @@ const HomePage = ({ openModal }) => {
         <title>Clean Choice WI | Milwaukee Commercial & Office Cleaning</title>
         <meta
           name="description"
-          content="Home page of Clean Choice WI. Includes services (commercial cleaning, carpet cleaning, and floor care and tile re-waxing), about us and customer reviews."
+          content="Discover Clean Choice WI: Expert commercial, carpet, and floor care cleaning. Learn about us and read customer reviews. Serving Milwaukee with excellence."
         />
       </Helmet>
       {isLoading ? (

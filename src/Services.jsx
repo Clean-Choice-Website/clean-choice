@@ -66,7 +66,7 @@ const Services = ({ openModal }) => {
         <title>Milwaukee Commercial Cleaning Services | Clean Choice WI</title>
         <meta
           name="description"
-          content="Clean Choice Wisconsin offers commercial cleaning, carpet cleaning, floor care & tile re-waxing, office cleaning and janitorial services primarily operating out of the Milwaukee, Wisconsin area."
+          content="Clean Choice Wisconsin: Commercial cleaning, carpet cleaning, floor scrubbing, office cleaning in Milwaukee, WI."
         />
       </Helmet>
       {isLoading ? (
