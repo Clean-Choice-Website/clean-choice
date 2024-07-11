@@ -63,11 +63,7 @@ const Services = ({ openModal }) => {
             gtag('config', 'G-1CGBG1QG79');
           `}
         </script>
-        <title>
-          Clean Choice Wisconsin Services | Milwaukee Commercial Cleaning,
-          Carpet Cleaning, Floor Care & Tile Re-waxing, Office Cleaning and
-          Janitorial Services
-        </title>
+        <title>Milwaukee Commercial Cleaning Services | Clean Choice WI</title>
         <meta
           name="description"
           content="Clean Choice Wisconsin offers commercial cleaning, carpet cleaning, floor care & tile re-waxing, office cleaning and janitorial services primarily operating out of the Milwaukee, Wisconsin area."

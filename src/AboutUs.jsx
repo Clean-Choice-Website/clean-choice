@@ -38,8 +38,7 @@ const AboutUs = () => {
           `}
         </script>
         <title>
-          Clean Choice Wisconsin About Us | Milwaukee Commercial Cleaning,
-          Office Cleaning and Janitorial Services
+          About Clean Choice WI | Milwaukee's Premier Cleaning Service
         </title>
         <meta
           name="description"
