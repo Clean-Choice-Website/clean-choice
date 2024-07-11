@@ -6,7 +6,7 @@ const ServicesContent = ({ image, name, info, list, row }) => {
       </div>
       <div className="lg:basis-1/2">
         <div className="my-4 text-center lg:mt-2 lg:text-left">
-          <h3 className="text-3xl font-bold">{name}</h3>
+          <h2 className="text-3xl font-bold">{name}</h2>
         </div>
         <div className="items-start">
           <p className="py-2 md:px-0">{info}</p>

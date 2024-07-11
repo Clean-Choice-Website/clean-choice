@@ -122,7 +122,7 @@ const Careers = () => {
             <div>
               <div className="mx-auto w-80 text-center md:w-auto">
                 <h1 className="mb-5 pt-10 text-4xl font-bold md:mt-0 md:text-5xl">
-                  Start a Career with us today!
+                  Start a Career with Clean Choice!
                 </h1>
                 <h2 className="text-xl font-semibold">
                   We are always hiring and are looking for passionate
@@ -151,11 +151,23 @@ const Careers = () => {
               <p className="mx-10 text-left sm:mx-0">
                 Join our team of dedicated cleaners and transform spaces into
                 sparkling, welcoming environments that leave a lasting impact.
-                As a cleaner, you'll play a crucial role in maintaining the
-                cleanliness and hygiene standards that our clients depend on.
-                Experience the satisfaction of seeing immediate results and
-                knowing that your work contributes to healthier, safer
-                workplaces for our clients and their employees.
+                As a cleaner at Clean Choice, you'll play a crucial role in
+                maintaining the cleanliness and hygiene standards that our
+                clients depend on. Experience the satisfaction of seeing
+                immediate results and knowing that your work contributes to
+                healthier, safer workplaces for our clients and their employees.
+                <br></br>
+                <br></br>
+                At Clean Choice, we prioritize not only cleanliness but also
+                excellence in service. Our team is built on a foundation of
+                professionalism, reliability, and a commitment to exceeding our
+                clients' expectations. We provide comprehensive training and
+                support to ensure that every member of our team is equipped with
+                the skills and knowledge needed to deliver exceptional results.
+                Join us in creating environments where cleanliness enhances
+                productivity and well-being, and where your dedication is valued
+                and rewarded. Discover a career with Clean Choice and make a
+                difference in the communities we serve.
               </p>
             </div>
             <form
