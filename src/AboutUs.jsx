@@ -56,15 +56,14 @@ const AboutUs = () => {
             <section className="flex flex-col items-center justify-between py-4 md:items-start">
               <div className="mx-8 w-full py-4 md:mx-0">
                 <h1 className="mx-8 rounded-md bg-logoGreen px-4 py-4 text-center text-xl font-bold text-white sm:px-0">
-                  Professional Commercial Cleaning, Office Cleaning and
-                  Janitorial Services
+                  About Clean Choice Wisconsin: Our Commitment to Excellence
                 </h1>
               </div>
               <div className="md:flex md:max-w-7xl md:flex-row md:gap-4 md:pr-8">
                 <div className="items-start">
-                  <h1 className="text-center text-3xl font-bold md:mx-8 md:text-left">
+                  <h2 className="text-center text-3xl font-bold md:mx-8 md:text-left">
                     About Us
-                  </h1>
+                  </h2>
                   <p className="px-8 py-2 font-bold">
                     Experience the Clean Choice advantage!
                   </p>
@@ -86,7 +85,7 @@ const AboutUs = () => {
               </div>
             </section>
             <section className="flex flex-col items-center justify-between py-4 md:items-start">
-              <h1 className="text-3xl font-bold md:mx-8">Our Mission</h1>
+              <h2 className="text-3xl font-bold md:mx-8">Our Mission</h2>
               <div className="items-start">
                 <p className="px-8 py-2 font-bold">
                   We care about being your first choice and make it our goal to
@@ -102,7 +101,7 @@ const AboutUs = () => {
               </div>
             </section>
             <section className="flex flex-col items-center justify-between py-4 md:items-start">
-              <h1 className=" text-3xl font-bold md:mx-8">Our Promise</h1>
+              <h2 className=" text-3xl font-bold md:mx-8">Our Promise</h2>
               <div className="items-start">
                 <p className="px-8 py-2 font-bold">
                   Feel confident that Clean Choice can exceed your expectations

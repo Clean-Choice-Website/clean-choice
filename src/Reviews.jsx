@@ -208,7 +208,7 @@ const Reviews = () => {
         </Review>
       </div>
       <div className="mt-16 text-center">
-        <h1 className="mb-3 mt-2 text-3xl font-bold">Leave A Review</h1>
+        <h2 className="mb-3 mt-2 text-3xl font-bold">Leave A Review</h2>
         {/* <p className='mb-4'>We are here for you! How can we help?</p> */}
         <form
           onSubmit={handleSubmit}
@@ -276,7 +276,7 @@ const Reviews = () => {
                 className="h-12 w-12"
               />
             </div>
-            <h1 className="mb-4 text-3xl font-bold">Thank You!</h1>
+            <h3 className="mb-4 text-3xl font-bold">Thank You!</h3>
             <p className="mb-10">
               Thanks for leaving a review. Your feedback helps us get better!
             </p>

@@ -78,11 +78,11 @@ const Services = ({ openModal }) => {
           <ContactInfo />
           <div className="mx-auto max-w-screen-sm lg:max-w-7xl">
             <section className="mx-8 flex flex-col items-center justify-between py-4 lg:items-start">
-              <h1 className="mt-4 text-3xl font-bold">Our Services</h1>
+              <h2 className="mt-4 text-3xl font-bold">Our Services</h2>
               <div className="w-full py-4 md:mx-0 lg:pb-10">
                 <h1 className="rounded-md bg-logoGreen px-4 py-4 text-center text-xl font-bold text-white lg:px-0">
-                  Proudly Serving Milwaukee, Brookfield, Waukesha, Peawaukee and
-                  Hartland for over 10 years
+                  Trusted Commercial Cleaning Services in Milwaukee and
+                  Surrounding Areas.
                 </h1>
               </div>
               <div className="flex flex-col gap-6 lg:mx-0">
