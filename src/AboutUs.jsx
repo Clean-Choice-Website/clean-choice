@@ -42,7 +42,7 @@ const AboutUs = () => {
         </title>
         <meta
           name="description"
-          content="Learn about Clean Choice Wisconsin. A commercial cleaning, office cleaning and janitorial services company that operates in the Milwaukee, Wisconsin area."
+          content="Learn about Clean Choice Wisconsin, offering top-notch commercial and office cleaning services in Milwaukee, WI."
         />
       </Helmet>
       {isLoading ? (

@@ -108,7 +108,7 @@ const Careers = () => {
         </title>
         <meta
           name="description"
-          content="Explore commercial cleaning and janitorial jobs at Clean Choice Wisconsin operating in Milwaukee and the surrounding areas. View our open positions to get started with a rewarding career in the cleaning industry."
+          content="Explore commercial cleaning jobs at Clean Choice Wisconsin. View open positions in Milwaukee and start a rewarding cleaning career."
         />
       </Helmet>
       {isLoading ? (
