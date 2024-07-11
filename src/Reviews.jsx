@@ -95,8 +95,7 @@ const Reviews = () => {
           `}
         </script>
         <title>
-          Clean Choice Wisconsin Reviews | Milwaukee Commercial Cleaning, Office
-          Cleaning and Janitorial Services
+          Customer Reviews | Clean Choice WI | Milwaukee Cleaning Services
         </title>
         <meta
           name="description"

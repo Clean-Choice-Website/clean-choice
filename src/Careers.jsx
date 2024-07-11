@@ -104,8 +104,7 @@ const Careers = () => {
           `}
         </script>
         <title>
-          Clean Choice Wisconsin Careers | Milwaukee Commercial Cleaning, Office
-          Cleaning and Janitorial Careers
+          Join Clean Choice WI | Careers in Milwaukee Commercial Cleaning
         </title>
         <meta
           name="description"

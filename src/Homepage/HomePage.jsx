@@ -76,10 +76,7 @@ const HomePage = ({ openModal }) => {
             gtag('config', 'G-1CGBG1QG79');
           `}
         </script>
-        <title>
-          Clean Choice Wisconsin | Milwaukee Commercial Cleaning, Office
-          Cleaning and Janitorial Services
-        </title>
+        <title>Clean Choice WI | Milwaukee Commercial & Office Cleaning</title>
         <meta
           name="description"
           content="Home page of Clean Choice WI. Includes services (commercial cleaning, carpet cleaning, and floor care and tile re-waxing), about us and customer reviews."
