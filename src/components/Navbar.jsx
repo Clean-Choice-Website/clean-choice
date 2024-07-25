@@ -38,7 +38,7 @@ function Navbar({ openModal }) {
           />
         </button>
         {/* Nav links */}
-        <div className="ml-auto hidden items-center gap-8 md:flex">
+        <div className="ml-auto hidden items-center gap-8 md:flex md:gap-5 xl:gap-8">
           <Link to="/about">
             <li className="list-none font-medium transition-all hover:text-logoGreen">
               About Us
@@ -57,6 +57,11 @@ function Navbar({ openModal }) {
           <Link to="/careers">
             <li className="list-none font-medium transition-all hover:text-logoGreen">
               Careers
+            </li>
+          </Link>
+          <Link to="/blog">
+            <li className="list-none font-medium transition-all hover:text-logoGreen">
+              Blog
             </li>
           </Link>
           {/* <button

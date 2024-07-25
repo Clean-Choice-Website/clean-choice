@@ -69,6 +69,14 @@ const MobileNavbar = ({ setShowMenu, openModal }) => {
               Careers
             </li>
           </Link>
+          <Link to="/blog">
+            <li
+              onClick={() => setShowMenu(false)}
+              className="border-b border-gray-300 py-4 transition-all hover:text-logoGreen"
+            >
+              Blog
+            </li>
+          </Link>
           {/* <Link> */}
           <div
             onClick={() => setShowMenu(false)}

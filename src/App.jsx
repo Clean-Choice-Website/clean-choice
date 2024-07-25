@@ -9,6 +9,13 @@ import Careers from "./Careers";
 import { Routes, Route, Link } from "react-router-dom";
 import ContactModal from "./components/ContactModal";
 import Reviews from "./Reviews";
+import Blog from "./Blog";
+import EssentialCleaning from "./BlogArticles/EssentialCleaning";
+import CarpetCleaning from "./BlogArticles/CarpetCleaning";
+import AirportCleaning from "./BlogArticles/AirportCleaning";
+import SpringDeepCleaning from "./BlogArticles/DeepCleaning";
+import FloorScrubbing from "./BlogArticles/FloorScrubbing";
+import WhyChooseUs from "./BlogArticles/WhyCleanChoice";
 
 function NotFound() {
   return (
@@ -54,6 +61,17 @@ function App() {
         />
         <Route exact path="/careers" element={<Careers />} />
         <Route exact path="/reviews" element={<Reviews />} />
+        <Route exact path="/blog" element={<Blog />} />
+        <Route
+          exact
+          path="/essential-cleaning"
+          element={<EssentialCleaning />}
+        />
+        <Route exact path="/carpet-cleaning" element={<CarpetCleaning />} />
+        <Route exact path="/deep-cleaning" element={<SpringDeepCleaning />} />
+        <Route exact path="/floor-scrubbing" element={<FloorScrubbing />} />
+        <Route exact path="/why-clean-choice" element={<WhyChooseUs />} />
+        <Route exact path="/airport-cleaning" element={<AirportCleaning />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer openModal={openModal} />
