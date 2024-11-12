@@ -26,15 +26,14 @@ const AboutUs = () => {
         {/* Google Analytics tracking code */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-1CGBG1QG79"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16595064549"
         ></script>
         <script>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
-            gtag('config', 'G-1CGBG1QG79');
+            gtag('config', 'AW-16595064549');
           `}
         </script>
         <title>
