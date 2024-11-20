@@ -129,6 +129,27 @@ const Careers = () => {
                 </h2>
               </div>
               <div className="pt-4 text-center">
+                <a href={application} target="_blank" rel="noreferrer">
+                  <button className="rounded-md bg-logoGreen px-6 py-3 text-center font-bold text-white transition-all hover:bg-logoGreenHover">
+                    <div className="inline-flex gap-2">
+                      Download Application Form
+                    </div>
+                  </button>
+                </a>
+              </div>
+              <br></br>
+              <h4 className="text-md text-center font-semibold">
+                Download the application form above
+                <br></br>
+                and email to{" "}
+                <a
+                  href="mailto:info@cleanchoicewi.com"
+                  className="underline transition-all hover:text-logoGreen"
+                >
+                  info@cleanchoicewi.com
+                </a>
+              </h4>
+              {/* <div className="pt-4 text-center">
                 <a
                   href="https://www.indeed.com/cmp/Clean-Choice,-LLC?_gl=1*gmat5r*_gcl_au*MTI4Nzc5MTg2Ny4xNjgxMDc0MTgw"
                   target="_blank"
@@ -141,7 +162,7 @@ const Careers = () => {
                     </div>
                   </button>
                 </a>
-              </div>
+              </div> */}
             </div>
             <div className="mx-auto my-8 max-w-sm md:max-w-xl">
               <h3 className="mx-10 mb-3 text-center font-bold sm:mx-0">
@@ -173,27 +194,22 @@ const Careers = () => {
               onSubmit={handleSubmit}
               className="mx-auto w-72 space-y-5 md:mx-14 md:w-96"
             >
-              <h4 className="text-md text-center font-semibold">
-                Download an application{" "}
+              <div className="pt-4 text-center">
                 <a
-                  href={application}
+                  href="https://www.indeed.com/cmp/Clean-Choice,-LLC?_gl=1*gmat5r*_gcl_au*MTI4Nzc5MTg2Ny4xNjgxMDc0MTgw"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-logoGreen underline hover:text-logoGreenHover"
                 >
-                  here
-                </a>{" "}
-                and
-                <br></br>
-                email to{" "}
-                <a
-                  href="mailto:info@cleanchoicewi.com"
-                  className="transition-all hover:text-logoGreen"
-                >
-                  info@cleanchoicewi.com
+                  <button className="rounded-md bg-[#2457A7] px-6 py-3 text-center font-bold text-white transition-all hover:bg-[#2440a7]">
+                    <div className="inline-flex gap-2">
+                      Apply with Indeed{" "}
+                      <img className="w-6" src={Indeed} alt="Indeed Icon" />
+                    </div>
+                  </button>
                 </a>
-                <br></br>
-                <br></br>
+              </div>
+              <p className="text-md text-center font-semibold">or</p>
+              <h4 className="text-md text-center font-semibold">
                 Contact us about available jobs
               </h4>
               <input
