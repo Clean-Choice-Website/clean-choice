@@ -190,24 +190,24 @@ const Careers = () => {
                 difference in the communities we serve.
               </p>
             </div>
+            <div className="pb-5 pt-4 text-center">
+              <a
+                href="https://www.indeed.com/cmp/Clean-Choice,-LLC?_gl=1*gmat5r*_gcl_au*MTI4Nzc5MTg2Ny4xNjgxMDc0MTgw"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button className="rounded-md bg-[#2457A7] px-6 py-3 text-center font-bold text-white transition-all hover:bg-[#2440a7]">
+                  <div className="inline-flex gap-2">
+                    Apply with Indeed{" "}
+                    <img className="w-6" src={Indeed} alt="Indeed Icon" />
+                  </div>
+                </button>
+              </a>
+            </div>
             <form
               onSubmit={handleSubmit}
               className="mx-auto w-72 space-y-5 md:mx-14 md:w-96"
             >
-              <div className="pt-4 text-center">
-                <a
-                  href="https://www.indeed.com/cmp/Clean-Choice,-LLC?_gl=1*gmat5r*_gcl_au*MTI4Nzc5MTg2Ny4xNjgxMDc0MTgw"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="rounded-md bg-[#2457A7] px-6 py-3 text-center font-bold text-white transition-all hover:bg-[#2440a7]">
-                    <div className="inline-flex gap-2">
-                      Apply with Indeed{" "}
-                      <img className="w-6" src={Indeed} alt="Indeed Icon" />
-                    </div>
-                  </button>
-                </a>
-              </div>
               <p className="text-md text-center font-semibold">or</p>
               <h4 className="text-md text-center font-semibold">
                 Contact us about available jobs
