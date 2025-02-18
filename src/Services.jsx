@@ -10,9 +10,12 @@ import {
   floorInfo,
   row,
   rowReverse,
+  waxList,
+  waxInfo,
 } from "./utils/services";
 import CleaningImg from "./assets/CommercialCleaning_Header.png";
 import CommercialCleaning from "./assets/CommercialCleaning.png";
+import Wax from "./assets/floorStripAndWax.png";
 import FloorCare from "./assets/FloorCare.png";
 import ContactInfo from "./components/ContactInfo";
 import ServicesContent from "./components/ServicesContent";
@@ -105,6 +108,13 @@ const Services = ({ openModal }) => {
                   list={floorList}
                   info={floorInfo}
                   row={row}
+                />
+                <ServicesContent
+                  image={Wax}
+                  name={"Strip and Wax"}
+                  list={waxList}
+                  info={waxInfo}
+                  row={rowReverse}
                 />
               </div>
             </section>
