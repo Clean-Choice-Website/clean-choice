@@ -36,12 +36,12 @@ const HomePageAbout = ({ aboutImage }) => {
               10 years
             </h4>
             <p className="font-light">
-              Our highest standards for cleanliness keep our well-trained and
-              motivated cleaners focused on delivering top-quality, consistent
-              service. We go the extra mile for our clients with our 24/7 phone
-              line, environmentally responsible approach, and free custom
-              proposals to ensure our customers' facilities are cleaned to their
-              utmost satisfaction.
+              At Clean Choice, it’s our people who make the difference. Our
+              dedicated team is highly trained, detail-focused, and committed to
+              delivering consistent, top-quality results. We go the extra mile
+              with clear communication, reliable follow-through, and free custom
+              proposals. Every client, big or small, deserves a spotless space
+              and a partner they can count on.
             </p>
             <div className="mx-auto md:mx-0">
               <Button to={"about"}>Learn More</Button>
