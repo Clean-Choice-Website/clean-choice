@@ -1,5 +1,6 @@
 import "../App.css";
 import linkedin from "../assets/linkedin.png";
+import facebook from "../assets/facebook.png";
 import cleanChoice from "../assets/CleanChoice.png";
 import { Link } from "react-router-dom";
 
@@ -37,13 +38,22 @@ function Footer({ openModal }) {
               <li className="text-md hidden text-center font-semibold transition-all hover:cursor-pointer hover:text-logoGreen md:block md:w-20 md:text-left lg:w-32 lg:text-lg">
                 Follow Us
               </li>
-              <ul className="hidden text-center text-xs md:block md:text-sm">
+              <ul className="hidden text-center text-xs md:flex md:text-sm">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100063456492630"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <li className="ml-3">
+                    <img src={facebook} alt="Facebook icon" className="w-6" />
+                  </li>
+                </a>
                 <a
                   href="https://www.linkedin.com/company/cleanchoicellc"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <li className="ml-7">
+                  <li className="ml-1">
                     <img src={linkedin} alt="Linkedin icon" className="w-6" />
                   </li>
                 </a>
@@ -73,17 +83,26 @@ function Footer({ openModal }) {
                 </ul>
               </div>
             </div>
-            <ul className="flex md:hidden">
-              <li className="px-1">
-                <a
-                  href="https://www.linkedin.com/company/cleanchoicellc"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={linkedin} alt="Linkedin icon" className="w-6" />
-                </a>
-              </li>
-            </ul>
+          </ul>
+          <ul className="mt-4 flex justify-center md:hidden">
+            <li className="px-1">
+              <a
+                href="https://www.facebook.com/profile.php?id=100063456492630"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={facebook} alt="Facebook icon" className="w-6" />
+              </a>
+            </li>
+            <li className="px-1">
+              <a
+                href="https://www.linkedin.com/company/cleanchoicellc"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={linkedin} alt="Linkedin icon" className="w-6" />
+              </a>
+            </li>
           </ul>
         </div>
       </footer>
