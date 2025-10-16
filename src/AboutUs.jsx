@@ -1,5 +1,6 @@
 import ContactInfo from "./components/ContactInfo";
 import Alex from "./assets/Alex.jpeg";
+import Team from "./assets/Team.jpeg";
 import Michelle from "./assets/MichelleAbout.png";
 import { useEffect, useState } from "react";
 import { scrollToTop } from "./utils/scrollToTop";
@@ -65,6 +66,13 @@ const AboutUs = () => {
                 <h1 className="mx-8 rounded-md bg-logoGreen px-4 py-4 text-center text-xl font-bold text-white sm:px-0">
                   Meet the People Behind Clean Choice
                 </h1>
+              </div>
+              <div className="flex w-full justify-center py-6">
+                <img
+                  className="w-2/3 max-w-5xl rounded-lg object-cover shadow-md"
+                  src={Team}
+                  alt="Clean Choice Team"
+                />
               </div>
               <div className="md:flex md:max-w-7xl md:flex-row md:gap-4 md:pr-8">
                 <div className="items-start">
