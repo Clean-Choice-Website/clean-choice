@@ -13,6 +13,12 @@ export const floorList = [
   "We tailor our deep cleaning services to meet your specific needs, whether it's targeting high-traffic areas or addressing specific cleaning challenges",
   "Give your space a fresh start with our one-time deep cleaning, perfect for seasonal cleanings, special events, or just to maintain a pristine environment",
 ];
+export const constructionList = [
+  "Our post-construction cleaning service removes dust, debris, and residue, leaving your newly built or renovated space spotless and ready for use",
+  "We tailor our construction cleaning services to meet your project’s needs, whether it’s final detail cleaning, debris removal, or preparing for inspections",
+  "Give your project a polished finish with our construction cleaning service, perfect for remodels, new builds, and commercial renovations",
+];
+
 export const waxList = [
   "Removes dirt, scuffs, and old wax buildup for a like-new finish",
   "Protects floors from wear and tear, making future cleaning easier",
@@ -24,6 +30,8 @@ export const carpetInfo =
   "Our carpet cleaning process uses hot water extraction technology and premium chemicals to get your carpets fresh, stain-free, and looking like new again. Our meticulous floor scrubbing process effectively tackles stubborn dirt and grime that regular mopping can't handle.";
 export const floorInfo =
   "Our deep cleaning service revitalizes your facility leaving it refreshed and renewed. With our flexibility and no long term contracts, we can create a budgeted plan tailored to your specific needs.";
+export const constructionInfo =
+  "Our construction cleaning service gets your space move-in ready by removing dust, debris, and residue from every surface. We provide flexible scheduling and customized plans to fit your project’s timeline and specific needs.";
 export const waxInfo =
   "Our strip and wax service restores the shine and durability of your hard floors by removing built-up grime and applying a fresh protective wax coating. This process extends the life of your floors and keeps them looking professional and polished.";
 export const row =
