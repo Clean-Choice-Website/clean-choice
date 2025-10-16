@@ -1,6 +1,6 @@
 import ContactInfo from "./components/ContactInfo";
 import Alex from "./assets/Alex.jpeg";
-import Team from "./assets/team.jpeg";
+import Team from "./assets/Team.jpeg";
 import Michelle from "./assets/MichelleAbout.png";
 import { useEffect, useState } from "react";
 import { scrollToTop } from "./utils/scrollToTop";
