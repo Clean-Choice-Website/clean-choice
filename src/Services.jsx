@@ -12,8 +12,11 @@ import {
   rowReverse,
   waxList,
   waxInfo,
+  constructionList,
+  constructionInfo,
 } from "./utils/services";
 import CleaningImg from "./assets/CommercialCleaning_Header.png";
+import ConstructionCleaning from "./assets/ConstructionCleaning.jpeg";
 import CommercialCleaning from "./assets/CommercialCleaning.png";
 import Wax from "./assets/floorStripAndWax.png";
 import FloorCare from "./assets/FloorCare.png";
@@ -110,11 +113,18 @@ const Services = ({ openModal }) => {
                   row={row}
                 />
                 <ServicesContent
+                  image={ConstructionCleaning}
+                  name={"Construction Cleaning"}
+                  list={constructionList}
+                  info={constructionInfo}
+                  row={rowReverse}
+                />
+                <ServicesContent
                   image={Wax}
                   name={"Strip and Wax"}
                   list={waxList}
                   info={waxInfo}
-                  row={rowReverse}
+                  row={row}
                 />
               </div>
             </section>
