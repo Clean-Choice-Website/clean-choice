@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import thankyoucheck from "./assets/thankyoucheck.png";
 import { BarLoader } from "react-spinners";
 import emailjs from "emailjs-com";
@@ -8,6 +8,11 @@ import StarIcon from "./components/StarIcon";
 import { scrollToTop } from "./utils/scrollToTop";
 import { Helmet } from "react-helmet";
 import ContactInfo from "./components/ContactInfo";
+
+const DARK = "#406C2A";
+const DARKER = "#355622";
+const MID_TINT = "rgba(64,108,42,0.18)";
+const LIGHT_TINT = "rgba(64,108,42,0.12)";
 
 const Reviews = () => {
   const [isSending, setIsSending] = useState(false);
@@ -18,16 +23,67 @@ const Reviews = () => {
     email: "",
     message: "",
   });
-
   const [sentSuccessfully, setSentSuccessfully] = useState(false);
 
-  const closeModal = () => {
-    setSentSuccessfully(false);
-  };
+  const reviews = useMemo(
+    () => [
+      {
+        name: "29ten Salon",
+        quote:
+          "Clean Choice went above and beyond in cleaning our salon! We were in need of a deep clean and we know that is no small feat in an environment where there is hair everywhere! Michelle and Alex were extremely responsive and knowledgeable. They completed a walkthrough of our space ahead of time and asked questions about what our goals were. They showed up on time and ready to work the day of our clean and were extremely detail-oriented. We have gotten so many compliments on how clean and fresh our space is in the new year. They have exceptional customer service and we would absolutely recommend reaching out to them to clean your business, as well!",
+      },
+      {
+        name: "Mike Ryan",
+        quote:
+          "Great team of professionals that communicate well, keep on schedule, do a great job deep cleaning (I had them work on construction clean-up), and offer a competitive price. Will definitely use them again!",
+      },
+      {
+        name: "Michael Hamerlind",
+        quote:
+          "Michelle and her team at Clean Choice have been a professional and reliable partner for our Milwaukee based company. Always engaged with prompt and resolute communication. Would recommend!",
+      },
+      {
+        name: "Jon Zelie",
+        quote:
+          "Clean Choice is a solid pick for a cleaning service. Michelle and her team are easy to deal with, super reliable, and committed to quality.",
+      },
+      {
+        name: "Michelle Laycock",
+        quote:
+          "We are happy with the cleaning service we are receiving at 9840 S 27th St. The floors and bathrooms look good on Monday mornings and the rooms smell fresh. Thank you!",
+      },
+      {
+        name: "Kate Schmitt",
+        quote:
+          "Clean Choice cleans our downtown offices. Their thorough services leave our workspaces looking top-notch every day! I especially love their attentive customer service. They are quick to respond to any sort of request! Would recommend!",
+      },
+      {
+        name: "javier avila",
+        quote:
+          "I’ve been working with this company for 1 year and 6 months and have been extremely happy with the service I’ve received.",
+      },
+      {
+        name: "Kathy Young",
+        quote: "5-star Google review.",
+      },
+      {
+        name: "Joe Roubik",
+        quote:
+          "Clean Choice is an exceptional cleaning company. They take care of everything we need with professionalism and efficiency. I highly recommend them for special projects and regular cleaning. I could not be happier with the results.",
+      },
+      {
+        name: "Frank Colavita",
+        quote:
+          "We are a gym located in Greendale, and we recently enlisted Clean Choice to clean our facility. Michelle and Alex were easy to work with, maintaining clear communication throughout. We were particularly impressed by the thoroughness of their work, especially in the bathrooms. The sinks were previously covered with water stains and are now spotless. We highly recommend Clean Choice to anyone in need of top-notch cleaning services!",
+      },
+    ],
+    []
+  );
 
-  const handleChange = (e) => {
+  const closeModal = () => setSentSuccessfully(false);
+
+  const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,11 +100,7 @@ const Reviews = () => {
       .then(() => {
         setIsSending(false);
         setSentSuccessfully(true);
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
+        setFormData({ name: "", email: "", message: "" });
       })
       .catch((error) => {
         setErrorMsg(true);
@@ -62,23 +114,18 @@ const Reviews = () => {
     scrollToTop();
   }, []);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // close modal on outside click
   const handleOutsideClick = (e) => {
-    if (modalRef.current && !modalRef.current.contains(e.target)) {
-      closeModal();
-    }
+    if (modalRef.current && !modalRef.current.contains(e.target)) closeModal();
   };
 
   useEffect(() => {
     document.addEventListener("mousedown", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [handleOutsideClick]);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
 
   return (
-    <div className="bg-slate-100 pb-8">
+    <div className="bg-white">
       <Helmet>
         {/* Google Analytics tracking code */}
         <script
@@ -93,6 +140,7 @@ const Reviews = () => {
             gtag('config', 'AW-16595064549');
           `}
         </script>
+
         <title>
           Customer Reviews | Clean Choice WI | Milwaukee Cleaning Services
         </title>
@@ -101,188 +149,152 @@ const Reviews = () => {
           content="Read customer reviews of Clean Choice Wisconsin. See what clients say about our commercial and office cleaning services or leave your own review."
         />
       </Helmet>
+
       <ContactInfo />
-      <div className="mb-12 flex flex-col  items-center bg-logoGreen py-5">
-        <h1 className="mb-1 text-center text-3xl font-semibold text-white">
-          Reviews
-        </h1>
-        <div className="flex gap-1">
-          <StarIcon />
-          <StarIcon />
-          <StarIcon />
-          <StarIcon />
-          <StarIcon />
+
+      {/* Header */}
+      <div
+        className="border-b py-10"
+        style={{
+          background: `linear-gradient(135deg, ${DARK}, ${DARKER})`,
+          borderColor: MID_TINT,
+        }}
+      >
+        <div className="mx-auto max-w-screen-2xl px-6 text-center md:px-10">
+          <h1 className="text-3xl font-extrabold text-white md:text-4xl">
+            Reviews
+          </h1>
+
+          <div className="mt-3 flex justify-center gap-1">
+            <StarIcon />
+            <StarIcon />
+            <StarIcon />
+            <StarIcon />
+            <StarIcon />
+          </div>
+
+          <p className="mx-auto mt-3 max-w-2xl text-slate-100">
+            Real Google reviews from businesses across Milwaukee and the
+            surrounding suburbs.
+          </p>
         </div>
       </div>
 
-      <div className="flex flex-col gap-6">
-        <Review name="Jet In MKE">
-          We are a FBO at Mitchell airport and have been using Clean Choice for
-          over a year. They are very professional and pay attention to detail.
-          Their staff is friendly and communicate well with us. They are also
-          flexible as aircraft sometimes modify our plans. I would highly
-          recommend this service to anyone looking. Michelle the owner checks in
-          regularly so we can update any services. We appreciate her above and
-          beyond attitude.
-        </Review>
-        <Review name="Peak Performance Fitness Facility">
-          We are a gym located in Greendale, and we recently enlisted Clean
-          Choice to clean our facility. Michelle and Alex were easy to work
-          with, maintaining clear communication throughout. We were particularly
-          impressed by the thoroughness of their work, especially in the
-          bathrooms. The sinks were previously covered with water stains and are
-          now spotless. We highly recommend Clean Choice to anyone in need of
-          top-notch cleaning services!
-        </Review>
-        <Review name={"Brandon Neddef"}>
-          {`Good service and friendly staff. Staff is very friendly, punctual and thorough!`}
-        </Review>
-        <Review name="Kevin Coubal">
-          Plant Supervisor. Very easy people to work with and very
-          accommodating... Thanks for the Great service. I will definitely
-          recommend and use again...
-        </Review>
-        <Review name={"Lisa Turnacliff"}>
-          Clean Choice has done a good job. They are reliable and follow up with
-          any concerns or questions that arise. I like the open communication
-          between myself, the cleaners, and the owner. I would recommend Clean
-          Choice to anyone who is in the market for a new cleaning company.
-        </Review>
-        <Review name={"Jackie Hall"}>
-          Great Service, easy to work with and everyone is very friendly! The
-          owner is very attentive and helpful. She is easy to work with and
-          always making sure her workers are doing a good job. Michelle always
-          looks to make things easier and more efficient for her employees to be
-          able to do their job better. Clean Choice also did our carpet
-          cleaning. They come twice a week to clean and do a great job. I highly
-          recommend Clean Choice for your custodial needs.
-        </Review>
-        <Review name={"James Hendley"}>
-          Smooth execution of office carpet cleaning. I highly recommend Clean
-          Choice for office carpet cleaning. Timely, accurate, high quality
-          service, professionally executed with no impact on daily operations.
-        </Review>
-        <Review name={"Janet Rortvedt"}>
-          Ridgestone Bank has been with Clean Choice since 2011. The thing I
-          enjoy the most is that the owner is very involved and EXTREMELY
-          responsive when we have a concern or question. There has been
-          occasional turn over of the on site cleaning staff and things can be
-          missed when a new cleaner begins - talking with Chad clears any of our
-          concerns as soon as we voice them.
-        </Review>
-        <Review name={"Jody Giacomini"}>
-          Clean choice is always receptive to any needs, requirements, or
-          changes that we have needed in the past. They strive to provide
-          quality employees for our cleaning needs. We have a very challenging
-          work environment and they are very good about understanding this
-          dynamic. We have been very pleased, in the past, and the improvements
-          are evident of late as well.
-        </Review>
-        <Review name={"Kathy K."}>
-          Did a great job. Did a great job in our manufacturing facility. Very
-          reasonably priced.
-        </Review>
-        <Review name={"Luann Nevius"}>
-          Clean Choice does a great job keeping our office clean.
-        </Review>
-        <Review name={"April Blok"}>
-          Clean Choice has been such a great company to have clean our offices.
-          The owners' both go above and beyond to check in and make sure that we
-          are happy with the services that are being provided. Clean Choice has
-          also been a great help with our company, as we are a General
-          Contractor. We had one of our cleaning companies back out on a job,
-          and Clean Choice was able to step in last minute to be able to fulfill
-          the services that we needed.
-        </Review>
-        <Review name={"Kris Nelson"}>
-          We are a small, independent, private school and we were looking for
-          quality cleaning on a budget. Clean Choice has provided that to us.
-          From stripping and waxing our CVT flooring and making them shine, to
-          getting out years of old stains from our carpets, we couldn't be more
-          pleased. The owner is very responsive to all of our needs and responds
-          quickly to any concerns that may arise. She has also gone above and
-          beyond to help do other things around the school as well (from helping
-          replace lighting, to fixing doors and other maintenance items). Thank
-          you, Clean Choice for being such a great resource for us!
-        </Review>
-      </div>
-      <div className="mt-16 text-center">
-        <h2 className="mb-3 mt-2 text-3xl font-bold">Leave A Review</h2>
-        {/* <p className='mb-4'>We are here for you! How can we help?</p> */}
-        <form
-          onSubmit={handleSubmit}
-          className="mx-4 max-w-2xl space-y-5 md:mx-auto"
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="w-full rounded-md border border-gray-300 p-2"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full rounded-md border border-gray-300 p-2"
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            className="h-32 w-full rounded-md border border-gray-300 p-2"
-          ></textarea>
-          <div className="flex justify-start">
-            <button
-              type="submit"
-              disabled={isSending}
-              className={`mr-4 rounded-sm bg-logoGreen px-6 font-bold text-white transition-all hover:bg-logoGreenHover ${
-                isSending ? "py-5" : "py-2"
-              }`}
-            >
-              {isSending ? (
-                <BarLoader color="#fff" width={56} height={3} />
-              ) : (
-                "Submit"
-              )}
-            </button>
-            {errorMsg ? (
-              <small>Oops there was an error, please try again.</small>
-            ) : null}
+      {/* Reviews list */}
+      <section
+        className="py-14 md:py-16"
+        style={{
+          background: "linear-gradient(180deg, rgba(64,108,42,0.08), #ffffff)",
+        }}
+      >
+        <div className="mx-auto max-w-screen-2xl px-6 md:px-10">
+          <div className="grid gap-6">
+            {reviews.map((r) => (
+              <Review key={r.name} name={r.name}>
+                {r.quote}
+              </Review>
+            ))}
           </div>
-        </form>
-      </div>
+
+          {/* Leave a review */}
+          <div className="mt-16">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-extrabold text-slate-900">
+                Leave a Review
+              </h2>
+              <p className="mx-auto mt-2 max-w-2xl text-slate-600">
+                Have feedback to share? Send us a quick note and we’ll follow
+                up.
+              </p>
+            </div>
+
+            <form
+              onSubmit={handleSubmit}
+              className="mx-auto mt-8 max-w-2xl space-y-4 rounded-2xl border bg-white p-6 shadow-sm"
+              style={{ borderColor: MID_TINT }}
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full rounded-xl border bg-white p-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+                style={{ borderColor: MID_TINT }}
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full rounded-xl border bg-white p-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+                style={{ borderColor: MID_TINT }}
+              />
+
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="h-32 w-full rounded-xl border bg-white p-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+                style={{ borderColor: MID_TINT }}
+              />
+
+              <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
+                <button
+                  type="submit"
+                  disabled={isSending}
+                  className="inline-flex items-center justify-center rounded-xl bg-[#406C2A] px-6 py-3 font-semibold text-white shadow-lg shadow-green-700/30 transition hover:bg-[#355622] disabled:opacity-70"
+                >
+                  {isSending ? (
+                    <BarLoader color="#fff" width={56} height={3} />
+                  ) : (
+                    "Submit"
+                  )}
+                </button>
+
+                {errorMsg ? (
+                  <small className="text-sm font-semibold text-rose-600">
+                    Oops — there was an error. Please try again.
+                  </small>
+                ) : null}
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
 
       {/* Successful review sent modal */}
       {sentSuccessfully && (
-        <div className="fixed left-0 top-0 z-40 flex h-full w-full items-center justify-center bg-black bg-opacity-50 text-center">
+        <div className="fixed left-0 top-0 z-40 flex h-full w-full items-center justify-center bg-black/50 px-4 text-center">
           <div
             ref={modalRef}
-            className="relative mx-3 max-w-lg rounded-lg bg-white p-7 sm:mx-0"
+            className="relative w-full max-w-lg rounded-2xl bg-white p-8 shadow-xl"
           >
             <div className="mb-4 flex justify-center">
-              {/* Apply Tailwind CSS classes to adjust the size of the confirmation icon */}
               <img
                 src={thankyoucheck}
                 alt="Confirmation Icon"
                 className="h-12 w-12"
               />
             </div>
-            <h3 className="mb-4 text-3xl font-bold">Thank You!</h3>
-            <p className="mb-10">
+
+            <h3 className="mb-3 text-3xl font-extrabold text-slate-900">
+              Thank You!
+            </h3>
+            <p className="mb-8 text-slate-600">
               Thanks for leaving a review. Your feedback helps us get better!
             </p>
+
             <button
               type="button"
               onClick={closeModal}
-              className="rounded-sm bg-logoGreen px-6 py-2 font-bold text-white hover:bg-logoGreenHover"
+              className="inline-flex items-center justify-center rounded-xl bg-[#406C2A] px-6 py-3 font-semibold text-white transition hover:bg-[#355622]"
             >
               Close
             </button>
