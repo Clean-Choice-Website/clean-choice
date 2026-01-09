@@ -1,100 +1,101 @@
+// src/pages/HomePage.jsx
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import { scrollToTop } from "../utils/scrollToTop";
+import { Helmet } from "react-helmet";
 import { MoonLoader } from "react-spinners";
+import { scrollToTop } from "../utils/scrollToTop";
+
+// Sections (components)
 import HomePageHero from "./HomePageHero";
 import HomePageAbout from "./HomePageAbout";
 import HomePageServices from "./HomePageServices";
 import HomePageTestimonials from "./HomePageTestimonials";
+import HomePageProcess from "./HomePageProcess";
+import HomePageWhyChoose from "./HomePageWhyChoose";
+import ContactOwner from "./ContactOwner";
+import ContactCTA from "./ContactCTA";
+
+// Assets
 import aboutImage from "../assets/MichelleAbout.png";
 import heroImage from "../assets/SmallCoverPhoto.png";
 import heroImageLandscape from "../assets/FacebookCoverPhoto.png";
-import mopping from "../assets/mopping.jpg";
-import wavebg from "../assets/wavebg.png";
-import { Helmet } from "react-helmet";
+import alexImage from "../assets/alex.jpeg";
+import CommercialCleaning from "../assets/CommercialCleaning.png";
+import ConstructionCleaning from "../assets/ConstructionCleaning.jpeg";
+import FloorCare from "../assets/FloorCare.png";
 
-const HomePage = ({ openModal }) => {
+const DARK = "#406C2A";
+
+const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const loadImages = () => {
-      const imagePromises = [
-        new Promise((resolve) => {
-          const img1 = new Image();
-          img1.src = aboutImage;
-          img1.onload = resolve;
-        }),
-        new Promise((resolve) => {
-          const img2 = new Image();
-          img2.src = heroImage;
-          img2.onload = resolve;
-        }),
-        new Promise((resolve) => {
-          const img3 = new Image();
-          img3.src = heroImageLandscape;
-          img3.onload = resolve;
-        }),
-        new Promise((resolve) => {
-          const img4 = new Image();
-          img4.src = mopping;
-          img4.onload = resolve;
-        }),
-        new Promise((resolve) => {
-          const img5 = new Image();
-          img5.src = wavebg;
-          img5.onload = resolve;
-        }),
-      ];
-
-      Promise.all(imagePromises).then(() => {
-        setIsLoading(false);
-        scrollToTop();
-      });
-    };
-
-    // Set the loading state to true initially
-    setIsLoading(true);
-
-    // Call the function to load the images
-    loadImages();
+    const sources = [
+      aboutImage,
+      heroImage,
+      heroImageLandscape,
+      alexImage,
+      CommercialCleaning,
+      ConstructionCleaning,
+      FloorCare,
+    ];
+    Promise.all(
+      sources.map(
+        (src) =>
+          new Promise((resolve) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = resolve;
+            img.onerror = resolve;
+          })
+      )
+    ).then(() => {
+      setIsLoading(false);
+      scrollToTop();
+    });
   }, []);
 
   return (
     <>
       <Helmet>
-        {/* Google Analytics tracking code */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16595064549"
-        ></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16595064549');
-          `}
-        </script>
         <title>Clean Choice WI | Milwaukee Commercial & Office Cleaning</title>
         <meta
           name="description"
-          content="Discover Clean Choice WI: Expert commercial, carpet, and floor care cleaning. Learn about us and read customer reviews. Serving Milwaukee with excellence."
+          content="Professional commercial and post-construction cleaning for Milwaukee businesses. Reliable teams, consistent results, and flexible schedules. Get a free quote today."
         />
       </Helmet>
+
       {isLoading ? (
         <div className="mt-40 flex h-screen items-start justify-center">
-          <MoonLoader color={"#497429"} />
+          <MoonLoader color={DARK} />
         </div>
       ) : (
         <>
           <HomePageHero
-            openModal={openModal}
             heroImage={heroImage}
             heroImageLandscape={heroImageLandscape}
           />
-          <HomePageAbout aboutImage={aboutImage} />
-          <HomePageServices mopping={mopping} />
-          <HomePageTestimonials wavebg={wavebg} />
+
+          <HomePageAbout aboutImage={aboutImage} alexImage={alexImage} />
+
+          <HomePageServices
+            commercialImg={CommercialCleaning}
+            constructionImg={ConstructionCleaning}
+            floorImg={FloorCare}
+          />
+
+          {/* MID-PAGE direct contact block */}
+          {/* <ContactOwner /> */}
+
+          <HomePageTestimonials />
+
+          <HomePageProcess />
+
+          <HomePageWhyChoose />
+
+          {/* FINAL main quote CTA at the end */}
+          {/* <ContactCTA /> */}
+          <ContactOwner />
         </>
       )}
     </>

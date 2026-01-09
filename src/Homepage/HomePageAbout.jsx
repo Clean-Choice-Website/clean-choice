@@ -1,51 +1,106 @@
-const circleDimensions = 350;
-import Button from "../components/Button";
+/* eslint-disable react/prop-types */
+const DARK = "#406C2A";
+const DARKER = "#355622";
+const MID_TINT = "rgba(64,108,42,0.18)";
+const LIGHT_TINT = "rgba(64,108,42,0.12)";
 
-const HomePageAbout = ({ aboutImage }) => {
+const HomePageAbout = ({ aboutImage, alexImage }) => {
   return (
-    <section>
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-center px-9 py-16 sm:px-16 md:flex-row lg:pb-32">
-        <div className="relative flex h-64 justify-center md:w-1/2">
-          <svg
-            className="absolute -left-44 -top-24 hidden scale-75 md:-left-8 md:-top-0 md:block md:scale-90 lg:left-20 lg:scale-100"
-            height={`${circleDimensions}`}
-            width={`${circleDimensions}`}
-          >
-            <circle
-              cx={`${circleDimensions / 2}`}
-              cy={`${circleDimensions / 2}`}
-              r={`${circleDimensions / 2}`}
-              strokeWidth="0"
-              fill="#C4D951"
-            />
-          </svg>
-          {/* PLACEHOLDER IMAGE CHANGE LATER */}
-          <img
-            className="absolute bottom-10 w-60 max-w-xs md:-left-10 md:-top-0 md:w-72 md:rounded lg:left-12 lg:w-80"
-            src={aboutImage}
-            alt="Woman cleaning a table, blue bucket on table"
-          />
+    <section
+      id="about"
+      className="relative py-16 md:py-20"
+      style={{ backgroundColor: DARKER, color: "white" }}
+    >
+      <div className="mx-auto max-w-screen-2xl px-6 md:px-10">
+        {/* Intro */}
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">
+            About Clean Choice
+          </h2>
+
+          <p className="mt-3 text-slate-100">
+            Clean Choice is a local, family-run commercial cleaning partner
+            focused on reliability, clear communication, and consistent results.
+            We build straightforward cleaning plans that fit your hours, your
+            budget, and your standards.
+          </p>
+
+          <div className="mt-5">
+            <a
+              href="/about"
+              className="inline-flex items-center rounded-xl border-2 border-white bg-[#406C2A] px-5 py-2.5 font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:border-[#f0f0f0] hover:shadow-lg"
+            >
+              Learn More About Us
+            </a>
+          </div>
         </div>
-        <div className="w-full md:w-1/2">
-          <div className="flex flex-col gap-6">
-            <h3 className="text-center text-5xl font-bold md:text-left">
-              About Us
-            </h3>
-            <h4 className="text-center text-lg font-bold md:text-left">
-              Serving Milwaukee, Wisconsin, and the surrounding areas for over
-              10 years
-            </h4>
-            <p className="font-light">
-              At Clean Choice, it’s our people who make the difference. Our
-              dedicated team is highly trained, detail-focused, and committed to
-              delivering consistent, top-quality results. We go the extra mile
-              with clear communication, reliable follow-through, and free custom
-              proposals. Every client, big or small, deserves a spotless space
-              and a partner they can count on.
-            </p>
-            <div className="mx-auto md:mx-0">
-              <Button to={"about"}>Learn More</Button>
+
+        {/* Michelle */}
+        <div className="mt-10 grid items-start gap-6 md:grid-cols-[180px,1fr] md:items-center">
+          <div className="flex justify-center md:justify-start">
+            <img
+              src={aboutImage}
+              alt="Michelle Lee, CEO and Owner of Clean Choice"
+              className="h-40 w-40 rounded-2xl object-cover shadow-md ring-2 ring-white md:h-44 md:w-44"
+            />
+          </div>
+
+          <div
+            className="rounded-2xl border bg-white p-5 shadow-sm"
+            style={{ borderColor: MID_TINT }}
+          >
+            <div className="flex flex-wrap items-center gap-3">
+              <h3 className="text-xl font-bold text-slate-900">Michelle Lee</h3>
+              <span
+                className="rounded-full px-3 py-1 text-sm font-semibold"
+                style={{ backgroundColor: LIGHT_TINT, color: DARK }}
+              >
+                CEO & Owner
+              </span>
             </div>
+
+            <p className="mt-2 text-slate-700">
+              Michelle is a solution-oriented leader with dual degrees in
+              Electrical Engineering from MSOE and FH Lübeck University in
+              Germany, bringing a sharp eye for detail and process to every
+              operation. Her hands-on leadership and commitment to Milwaukee’s
+              business community ensure consistent, high-quality results for
+              every client.
+            </p>
+          </div>
+        </div>
+
+        {/* Alex */}
+        <div className="mt-6 grid items-start gap-6 md:grid-cols-[180px,1fr] md:items-center">
+          <div className="flex justify-center md:justify-start">
+            <img
+              src={alexImage}
+              alt="Alex Bernt, COO of Clean Choice"
+              className="h-40 w-40 rounded-2xl object-cover shadow-md ring-2 ring-white md:h-44 md:w-44"
+            />
+          </div>
+
+          <div
+            className="rounded-2xl border bg-white p-5 shadow-sm"
+            style={{ borderColor: MID_TINT }}
+          >
+            <div className="flex flex-wrap items-center gap-3">
+              <h3 className="text-xl font-bold text-slate-900">Alex Bernt</h3>
+              <span
+                className="rounded-full px-3 py-1 text-sm font-semibold"
+                style={{ backgroundColor: LIGHT_TINT, color: DARK }}
+              >
+                COO & Director of Marketing
+              </span>
+            </div>
+
+            <p className="mt-2 text-slate-700">
+              Alex holds a degree in Business Administration from Coe College
+              along with a Software Engineering certificate from Fullstack
+              Academy, blending operational leadership with technical expertise.
+              A two-time Boston Marathon finisher, he brings discipline,
+              consistency, and high standards to everything Clean Choice does.
+            </p>
           </div>
         </div>
       </div>
