@@ -19,7 +19,7 @@ import ContactCTA from "./ContactCTA";
 import aboutImage from "../assets/MichelleAbout.png";
 import heroImage from "../assets/SmallCoverPhoto.png";
 import heroImageLandscape from "../assets/FacebookCoverPhoto.png";
-import alexImage from "../assets/alex.jpeg";
+import alexImage from "../assets/Alex.jpeg";
 import CommercialCleaning from "../assets/CommercialCleaning.png";
 import ConstructionCleaning from "../assets/ConstructionCleaning.jpeg";
 import FloorCare from "../assets/FloorCare.png";
