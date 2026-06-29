@@ -16,6 +16,7 @@ import AirportCleaning from "./BlogArticles/AirportCleaning";
 import SpringDeepCleaning from "./BlogArticles/DeepCleaning";
 import FloorScrubbing from "./BlogArticles/FloorScrubbing";
 import WhyChooseUs from "./BlogArticles/WhyCleanChoice";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 function NotFound() {
   return (
@@ -72,6 +73,7 @@ function App() {
         <Route exact path="/floor-scrubbing" element={<FloorScrubbing />} />
         <Route exact path="/why-clean-choice" element={<WhyChooseUs />} />
         <Route exact path="/airport-cleaning" element={<AirportCleaning />} />
+        <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer openModal={openModal} />
