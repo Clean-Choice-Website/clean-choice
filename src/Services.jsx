@@ -24,38 +24,43 @@ import ContactInfo from "./components/ContactInfo";
 import ServicesContent from "./components/ServicesContent";
 import { Helmet } from "react-helmet";
 
-const Services = ({ openModal }) => {
+const DARK = "#406C2A";
+const MID_TINT = "rgba(64,108,42,0.18)";
+const LIGHT_TINT = "rgba(64,108,42,0.12)";
+
+const FORM_URL = "https://40s7vw.share-na2.hsforms.com/2vnsTJgLFQiK5iSSq8YUuVA";
+
+const Services = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const imagePromises = [
-      new Promise((resolve) => {
-        const img1 = new Image();
-        img1.src = CommercialCleaning;
-        img1.onload = resolve;
-      }),
-      new Promise((resolve) => {
-        const img2 = new Image();
-        img2.src = CleaningImg;
-        img2.onload = resolve;
-      }),
-      new Promise((resolve) => {
-        const img3 = new Image();
-        img3.src = FloorCare;
-        img3.onload = resolve;
-      }),
+    const sources = [
+      CommercialCleaning,
+      CleaningImg,
+      FloorCare,
+      ConstructionCleaning,
+      Wax,
     ];
 
-    Promise.all(imagePromises).then(() => {
+    Promise.all(
+      sources.map(
+        (src) =>
+          new Promise((resolve) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = resolve;
+            img.onerror = resolve;
+          })
+      )
+    ).then(() => {
       setIsLoading(false);
       scrollToTop();
     });
   }, []);
 
   return (
-    <div>
+    <div className="bg-white">
       <Helmet>
-        {/* Google Analytics tracking code */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=AW-16595064549"
@@ -71,79 +76,140 @@ const Services = ({ openModal }) => {
         <title>Milwaukee Commercial Cleaning Services | Clean Choice WI</title>
         <meta
           name="description"
-          content="Clean Choice Wisconsin: Commercial cleaning, carpet cleaning, floor scrubbing, office cleaning in Milwaukee, WI."
+          content="Clean Choice Wisconsin provides commercial cleaning, one-time deep cleans, carpet cleaning, floor scrubbing, construction clean-up, and strip & wax services across Milwaukee and surrounding areas."
         />
       </Helmet>
+
       {isLoading ? (
         <div className="mt-40 flex h-screen items-start justify-center">
-          <MoonLoader color={"#497429"} />
+          <MoonLoader color={DARK} />
         </div>
       ) : (
-        <div>
+        <>
           <ContactInfo />
-          <div className="mx-auto max-w-screen-sm lg:max-w-7xl">
-            <section className="mx-8 flex flex-col items-center justify-between py-4 lg:items-start">
-              <h2 className="mt-4 text-3xl font-bold">Our Services</h2>
-              <div className="w-full py-4 md:mx-0 lg:pb-10">
-                <h1 className="rounded-md bg-logoGreen px-4 py-4 text-center text-xl font-bold text-white lg:px-0">
-                  Trusted Commercial Cleaning Services in Milwaukee and
-                  Surrounding Areas.
+
+          {/* Simple green header: ONE LINE ONLY */}
+          <section className="py-10">
+            <div className="mx-auto max-w-screen-2xl px-6 md:px-10">
+              <div
+                className="mx-auto max-w-5xl rounded-2xl px-6 py-6 text-center text-white shadow-sm"
+                style={{ backgroundColor: DARK }}
+              >
+                <h1 className="text-2xl font-extrabold md:text-3xl">
+                  Commercial Cleaning Services in the Greater Milwaukee Area
                 </h1>
               </div>
-              <div className="flex flex-col gap-6 lg:mx-0">
+            </div>
+          </section>
+
+          {/* Services Blocks */}
+          <section className="pb-14 md:pb-16">
+            <div className="mx-auto max-w-screen-2xl px-6 md:px-10">
+              <div className="flex flex-col gap-10">
                 <ServicesContent
                   image={CommercialCleaning}
-                  name={"Commercial Cleaning"}
+                  name="Commercial Cleaning"
                   list={commercialList}
                   info={commercialInfo}
                   row={row}
+                  imgPos="center 30%"
                 />
+
                 <ServicesContent
                   image={CleaningImg}
-                  name={"Carpet Cleaning & Floor Scrubbing"}
+                  name="Carpet Cleaning & Floor Scrubbing"
                   list={carpetList}
                   info={carpetInfo}
                   row={rowReverse}
+                  imgPos="center 35%"
                 />
+
                 <ServicesContent
                   image={FloorCare}
-                  name={"One-Time Deep Cleaning"}
+                  name="One-Time Deep Cleaning"
                   list={floorList}
                   info={floorInfo}
                   row={row}
+                  imgPos="center 35%"
                 />
+
                 <ServicesContent
                   image={ConstructionCleaning}
-                  name={"Construction Cleaning"}
+                  name="Construction Cleaning"
                   list={constructionList}
                   info={constructionInfo}
                   row={rowReverse}
+                  imgPos="center 30%"
                 />
+
                 <ServicesContent
                   image={Wax}
-                  name={"Strip and Wax"}
+                  name="Strip & Wax"
                   list={waxList}
                   info={waxInfo}
                   row={row}
+                  imgPos="center"
                 />
               </div>
-            </section>
-            <div className="mb-4 flex flex-col items-center justify-center md:mx-8 md:mt-6 md:justify-start">
-              <p className="mb-6 font-bold">
-                Have a Question regarding a service?
-              </p>
-              <button
-                onClick={openModal}
-                className="inline-block w-32 rounded bg-logoGreen py-3 text-center text-xl font-bold text-white transition-all hover:bg-logoGreenHover"
-              >
-                Contact Us
-              </button>
+
+              {/* Bottom CTA (kept) */}
+              <div className="mt-16">
+                <div
+                  className="mx-auto max-w-3xl rounded-2xl border bg-white p-8 text-center shadow-sm"
+                  style={{ borderColor: MID_TINT }}
+                >
+                  <div
+                    className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold"
+                    style={{ backgroundColor: LIGHT_TINT, color: DARK }}
+                  >
+                    Get a Free Quote
+                  </div>
+
+                  <h3 className="mt-3 text-2xl font-extrabold text-slate-900">
+                    Services tailored to your space
+                  </h3>
+
+                  <p className="mx-auto mt-2 max-w-2xl text-slate-600">
+                    Tell us what you need and we’ll recommend the right plan.
+                    Quotes are fast and free.
+                  </p>
+
+                  <div className="mt-6">
+                    <a
+                      href={FORM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-xl bg-[#406C2A] px-8 py-3 font-semibold text-white shadow-lg shadow-green-700/30 transition hover:bg-[#355622]"
+                    >
+                      Get a Free Quote
+                    </a>
+                  </div>
+
+                  <p className="mt-4 text-base text-slate-700 md:text-lg">
+                    Or call{" "}
+                    <a
+                      href="tel:4143109206"
+                      className="font-bold text-[#406C2A] hover:underline"
+                    >
+                      (414) 310-9206
+                    </a>{" "}
+                    or email{" "}
+                    <a
+                      href="mailto:info@cleanchoicewi.com"
+                      className="font-bold text-[#406C2A] hover:underline"
+                    >
+                      info@cleanchoicewi.com
+                    </a>
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </section>
+        </>
       )}
     </div>
   );
 };
 
 export default Services;
+0;
