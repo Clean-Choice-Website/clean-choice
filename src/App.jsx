@@ -18,6 +18,7 @@ import FloorScrubbing from "./BlogArticles/FloorScrubbing";
 import WhyChooseUs from "./BlogArticles/WhyCleanChoice";
 import PrivacyPolicy from "./PrivacyPolicy";
 import ThankYou from "./ThankYou";
+import CommercialCleaning from "./CommercialCleaning";
 
 function NotFound() {
   return (
@@ -74,6 +75,7 @@ function App() {
         <Route exact path="/floor-scrubbing" element={<FloorScrubbing />} />
         <Route exact path="/why-clean-choice" element={<WhyChooseUs />} />
         <Route exact path="/airport-cleaning" element={<AirportCleaning />} />
+        <Route path="/commercial-cleaning" element={<CommercialCleaning />} />
         <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="*" element={<NotFound />} />
