@@ -10,29 +10,37 @@ const LIGHT_TINT = "rgba(64,108,42,0.12)";
 const ThankYou = () => {
   useEffect(() => {
     scrollToTop();
+
+    // Ensure the Google data layer exists.
+    window.dataLayer = window.dataLayer || [];
+
+    // Use the existing global gtag function when available.
+    // Otherwise, create the standard queueing function.
+    window.gtag =
+      window.gtag ||
+      function gtag() {
+        window.dataLayer.push(arguments);
+      };
+
+    // Fire the Google Ads lead conversion event.
+    window.gtag("event", "conversion", {
+      send_to: "AW-18284556626/1aMACLvk7MccENLi4I5E",
+      value: 1.0,
+      currency: "USD",
+    });
   }, []);
 
   return (
     <div className="bg-white">
       <Helmet>
         <title>Thank You | Clean Choice WI</title>
+
         <meta
           name="description"
           content="Thank you for contacting Clean Choice WI. We received your request and will follow up as soon as possible."
         />
 
-        {/* Google Ads conversion event for submitted lead form */}
-        <script>
-          {`
-            if (typeof gtag === "function") {
-              gtag('event', 'conversion', {
-                'send_to': 'AW-18284556626/1aMACLvk7MccENLi4I5E',
-                'value': 1.0,
-                'currency': 'USD'
-              });
-            }
-          `}
-        </script>
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
       <ContactInfo />
